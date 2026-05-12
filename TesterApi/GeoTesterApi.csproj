@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="GeoJSON.Net" Version="1.4.1" />
+		<PackageReference Include="GeoToolkit" Version="1.0.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.0" />
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+		<PackageReference Include="NetTopologySuite" Version="2.6.0" />
+		<PackageReference Include="NetTopologySuite.IO.GeoJSON" Version="4.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+	</ItemGroup>
+
+	<!--
+    Include:
+      - all files inside any "datFiles" folder under ../MPMIncludes (recursive)
+      - any file named dll.txt anywhere under ../MPMIncludes
+  -->
+	<ItemGroup>
+		<Content Include="..\polygon.wkt" Link="polygon.wkt" CopyToOutputDirectory="PreserveNewest" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<MPMIncludeFiles Include="../MPMIncludes/**/datFiles/**/*;../MPMIncludes/**/dll.txt" />
+	</ItemGroup>
+
+	<Target Name="CopyMPMIncludes" BeforeTargets="BeforeBuild">
+		<Message Importance="High" Text="Copying MPMIncludes datFiles + dll.txt -&gt; $(OutputPath)" />
+		<Copy SourceFiles="@(MPMIncludeFiles)" DestinationFiles="@(MPMIncludeFiles->'$(OutputPath)%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+	</Target>
+
+</Project>

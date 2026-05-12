@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npm install *)",
+      "Read(//d/projects/GeoToolkit/**)",
+      "Bash(dotnet test *)"
+    ]
+  }
+}

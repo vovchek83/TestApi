@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet build *)",
+      "WebFetch(domain:www.nuget.org)",
+      "Bash(dotnet new *)",
+      "Bash(dotnet sln *)",
+      "Bash(dotnet add *)",
+      "Bash(dotnet test *)",
+      "Bash(xargs sed *)",
+      "Bash(powershell -Command ' *)",
+      "Bash(curl -s http://localhost:5297/geo/wkt-multipolygon)",
+      "Bash(curl -sv http://localhost:5297/geo/wkt-multipolygon)",
+      "Bash(powershell -Command \"Get-Process -Id 44876 -ErrorAction SilentlyContinue | Select-Object Name, Id, CPU\")",
+      "Bash(netstat -ano)",
+      "Bash(powershell -Command \"Get-Process -Id 62968 -ErrorAction SilentlyContinue | Select-Object Name, Id, Path\")",
+      "Bash(curl -sv http://localhost:5000/geo/wkt-multipolygon)",
+      "Bash(curl -s http://localhost:5000/geo/polygon)",
+      "Bash(curl -s http://localhost:5000/geo/multipolygon)",
+      "Bash(powershell -Command \"Get-WmiObject Win32_Process -Filter 'ProcessId=62968' | Select-Object -ExpandProperty CommandLine\")",
+      "Bash(powershell *)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

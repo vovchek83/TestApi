@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ASP.NET Core API (GeoTesterApi)",
+      "runtimeExecutable": "dotnet",
+      "runtimeArgs": ["watch", "run", "--project", "TesterApi/GeoTesterApi.csproj", "--launch-profile", "http"],
+      "port": 5297
+    },
+    {
+      "name": "React Frontend (Vite dev server)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "geo-map-ui",
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}

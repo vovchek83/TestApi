@@ -1,0 +1,417 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Toolbar ── */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 20px;
+  background: #0d1117;
+  border-bottom: 1px solid #21262d;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+
+.brand {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #58a6ff;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+/* ── Endpoint buttons ── */
+.endpoint-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ep-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background: #161b22;
+  color: #c9d1d9;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  font-family: ui-monospace, 'Cascadia Code', 'Fira Code', monospace;
+}
+
+.ep-btn:hover:not(:disabled) {
+  background: #21262d;
+  border-color: #58a6ff;
+  color: #fff;
+}
+
+.ep-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ep-method {
+  font-weight: 700;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background: #30363d;
+}
+
+/* per-endpoint accent colours */
+.ep-btn--polygon .ep-method      { color: #79c0ff; }
+.ep-btn--multipolygon .ep-method { color: #d2a8ff; }
+.ep-btn--donat .ep-method        { color: #b301fa; }
+.ep-btn--union .ep-method        { color: #56d364; }
+
+.ep-btn--polygon.ep-btn--active {
+  border-color: #3498db;
+  background: rgba(52, 152, 219, 0.15);
+  color: #79c0ff;
+}
+.ep-btn--multipolygon.ep-btn--active {
+  border-color: #9b59b6;
+  background: rgba(155, 89, 182, 0.15);
+  color: #d2a8ff;
+}
+.ep-btn--donat.ep-btn--active {
+  border-color: #b301fa;
+  background: rgba(179, 1, 250, 0.15);
+  color: #b301fa;
+}
+.ep-btn--union.ep-btn--active {
+  border-color: #2ed573;
+  background: rgba(46, 213, 115, 0.15);
+  color: #56d364;
+}
+.ep-btn--union-polygon .ep-method { color: #ff8c00; }
+.ep-btn--union-polygon.ep-btn--active {
+  border-color: #ff8c00;
+  background: rgba(255, 140, 0, 0.15);
+  color: #ff8c00;
+}
+
+/* ── Status ── */
+.status {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.78rem;
+  color: #8b949e;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.status--ok    { color: #56d364; }
+.status--error { color: #f85149; }
+.status--loading { color: #e3b341; }
+
+.spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Content area (map + LOS side panel) ── */
+.content {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+/* ── Map ── */
+.map-wrap {
+  flex: 1;
+  min-height: 0;
+}
+
+/* Override OL default cursor on map */
+.ol-viewport {
+  cursor: default !important;
+}
+
+/* ── Pin mode toolbar button ── */
+.pin-toggle-btn {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+.pin-toggle-btn.ep-btn--active {
+  background: rgba(231, 76, 60, 0.15);
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+/* ── LOS mode toolbar extras ── */
+.los-toggle-btn {
+  margin-left: auto;
+  border-color: #e67e22;
+  color: #e67e22;
+}
+.los-toggle-btn.ep-btn--active {
+  background: rgba(230,126,34,.15);
+  border-color: #e67e22;
+  color: #e67e22;
+}
+.los-step-hint {
+  font-size: 0.78rem;
+  color: #e3b341;
+  font-style: italic;
+}
+
+/* ── LOS side panel ── */
+.los-panel {
+  width: 280px;
+  flex-shrink: 0;
+  background: #0d1117;
+  border-left: 1px solid #21262d;
+  padding: 14px 14px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+.los-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.los-panel-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #c9d1d9;
+}
+.los-clear-btn {
+  background: none;
+  border: none;
+  color: #8b949e;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0 4px;
+}
+.los-clear-btn:hover { color: #f85149; }
+
+.los-coord-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border: 1px solid #21262d;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: #161b22;
+}
+.los-coord-label {
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: .05em;
+}
+.los-coord-val {
+  font-size: 0.75rem;
+  color: #8b949e;
+  font-family: ui-monospace, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.los-hint { color: #484f58; font-style: italic; }
+
+.los-h-label {
+  font-size: 0.72rem;
+  color: #8b949e;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.los-h-input {
+  width: 60px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  color: #c9d1d9;
+  font-size: 0.75rem;
+  padding: 2px 4px;
+  text-align: right;
+}
+.los-h-input:focus { outline: none; border-color: #58a6ff; }
+
+.los-freq-row {
+  font-size: 0.75rem;
+  color: #8b949e;
+  display: flex;
+  align-items: center;
+}
+
+.los-calc-btn {
+  padding: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #2d6a4f;
+  background: #1a3a2a;
+  color: #2ecc71;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+.los-calc-btn:hover:not(:disabled) {
+  background: #22503a;
+  border-color: #2ecc71;
+}
+.los-calc-btn:disabled { opacity: .4; cursor: not-allowed; }
+
+.los-calc-btn--viewshed {
+  border-color: #1a7fbf;
+  background: #0d2d42;
+  color: #4fc3f7;
+}
+.los-calc-btn--viewshed:hover:not(:disabled) {
+  background: #123a54;
+  border-color: #4fc3f7;
+}
+
+/* ── Mode tabs ── */
+.los-tabs {
+  display: flex;
+  gap: 6px;
+}
+.los-tab {
+  flex: 1;
+  padding: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #30363d;
+  background: #161b22;
+  color: #8b949e;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.los-tab:hover { color: #c9d1d9; border-color: #484f58; }
+.los-tab--active {
+  background: rgba(88,166,255,.12);
+  border-color: #58a6ff;
+  color: #58a6ff;
+  font-weight: 600;
+}
+
+.los-result {
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.75rem;
+}
+.los-result strong { font-size: 0.85rem; }
+.los-result--ok      { background: rgba(46,204,113,.12); border: 1px solid #2ecc71; color: #56d364; }
+.los-result--blocked { background: rgba(231,76,60,.12);  border: 1px solid #e74c3c; color: #f85149; }
+.los-result--error   { background: rgba(231,76,60,.08);  border: 1px solid #30363d; color: #f85149; }
+
+/* ── Map source toggle ── */
+.map-src-btn { border-color: #388bfd; color: #388bfd; }
+.map-src-btn:hover { background: rgba(56,139,253,.12); }
+.map-src-btn--local { border-color: #2ecc71; color: #2ecc71; background: rgba(46,204,113,.08); }
+
+/* ── SRTM downloader button ── */
+.srtm-dl-btn {
+  border-color: #388bfd;
+  color: #388bfd;
+}
+.srtm-dl-btn:hover { background: rgba(56,139,253,.12); border-color: #58a6ff; color: #58a6ff; }
+
+/* ── SRTM downloader overlay ── */
+.srtm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.srtm-dialog {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 24px;
+  width: 440px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.srtm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  color: #c9d1d9;
+}
+.srtm-info {
+  font-size: 0.78rem;
+  color: #8b949e;
+  margin: 0;
+  line-height: 1.5;
+}
+.srtm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.srtm-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: #8b949e;
+}
+.srtm-input {
+  width: 100% !important;
+  box-sizing: border-box;
+  padding: 5px 8px !important;
+}
+.srtm-btn { width: 100%; }
+.srtm-log {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 6px;
+  padding: 10px 12px;
+  max-height: 160px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.srtm-log-line { font-size: 0.72rem; font-family: ui-monospace, monospace; }
+.srtm-log--info  { color: #8b949e; }
+.srtm-log--ok    { color: #56d364; }
+.srtm-log--warn  { color: #e3b341; }
+.srtm-log--error { color: #f85149; }
+
+/* ── Elevation profile chart ── */
+.profile-wrap {
+  height: 160px;
+  flex-shrink: 0;
+  background: #0d1117;
+  border-top: 1px solid #21262d;
+}
+.profile-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
