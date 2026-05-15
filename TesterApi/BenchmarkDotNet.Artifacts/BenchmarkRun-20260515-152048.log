@@ -1,0 +1,1728 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 15 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b
+// command took 2.66s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b
+// command took 7.79s and exited with 0
+// ***** Done, took 00:00:10 (10.65 sec)   *****
+// Found 5 benchmarks:
+//   LosServiceBenchmarks.'LOS calculation with 50 samples': Job-TVZODC(IterationCount=5, WarmupCount=3)
+//   LosServiceBenchmarks.'LOS calculation with 500 samples': Job-TVZODC(IterationCount=5, WarmupCount=3)
+//   LosServiceBenchmarks.'LOS calculation with 2000 samples': Job-TVZODC(IterationCount=5, WarmupCount=3)
+//   LosServiceBenchmarks.'LOS calculation with high frequency (28 GHz)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+//   LosServiceBenchmarks.'LOS calculation with low frequency (400 MHz)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: LosServiceBenchmarks.'LOS calculation with 50 samples': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.LosServiceBenchmarks.Calculate_SmallSamples --job "IterationCount=5, WarmupCount=3" --benchmarkId 0 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-UTXWZO(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 634700.00 ns, 634.7000 us/op
+WorkloadJitting  1: 1 op, 5531900.00 ns, 5.5319 ms/op
+
+OverheadJitting  2: 16 op, 568700.00 ns, 35.5438 us/op
+WorkloadJitting  2: 16 op, 1416700.00 ns, 88.5438 us/op
+
+WorkloadPilot    1: 16 op, 978800.00 ns, 61.1750 us/op
+WorkloadPilot    2: 32 op, 1054700.00 ns, 32.9594 us/op
+WorkloadPilot    3: 64 op, 1382600.00 ns, 21.6031 us/op
+WorkloadPilot    4: 128 op, 2602100.00 ns, 20.3289 us/op
+WorkloadPilot    5: 256 op, 5580000.00 ns, 21.7969 us/op
+WorkloadPilot    6: 512 op, 9220000.00 ns, 18.0078 us/op
+WorkloadPilot    7: 1024 op, 18028300.00 ns, 17.6058 us/op
+WorkloadPilot    8: 2048 op, 35926200.00 ns, 17.5421 us/op
+WorkloadPilot    9: 4096 op, 82551500.00 ns, 20.1542 us/op
+WorkloadPilot   10: 8192 op, 177466900.00 ns, 21.6634 us/op
+WorkloadPilot   11: 16384 op, 187531800.00 ns, 11.4460 us/op
+WorkloadPilot   12: 32768 op, 303323700.00 ns, 9.2567 us/op
+WorkloadPilot   13: 65536 op, 625242900.00 ns, 9.5404 us/op
+
+OverheadWarmup   1: 65536 op, 209500.00 ns, 3.1967 ns/op
+OverheadWarmup   2: 65536 op, 232800.00 ns, 3.5522 ns/op
+OverheadWarmup   3: 65536 op, 546600.00 ns, 8.3405 ns/op
+OverheadWarmup   4: 65536 op, 178800.00 ns, 2.7283 ns/op
+OverheadWarmup   5: 65536 op, 181100.00 ns, 2.7634 ns/op
+OverheadWarmup   6: 65536 op, 190500.00 ns, 2.9068 ns/op
+OverheadWarmup   7: 65536 op, 254800.00 ns, 3.8879 ns/op
+OverheadWarmup   8: 65536 op, 416900.00 ns, 6.3614 ns/op
+OverheadWarmup   9: 65536 op, 268000.00 ns, 4.0894 ns/op
+
+OverheadActual   1: 65536 op, 176700.00 ns, 2.6962 ns/op
+OverheadActual   2: 65536 op, 204200.00 ns, 3.1158 ns/op
+OverheadActual   3: 65536 op, 151300.00 ns, 2.3087 ns/op
+OverheadActual   4: 65536 op, 310200.00 ns, 4.7333 ns/op
+OverheadActual   5: 65536 op, 295200.00 ns, 4.5044 ns/op
+OverheadActual   6: 65536 op, 335000.00 ns, 5.1117 ns/op
+OverheadActual   7: 65536 op, 213400.00 ns, 3.2562 ns/op
+OverheadActual   8: 65536 op, 311800.00 ns, 4.7577 ns/op
+OverheadActual   9: 65536 op, 240000.00 ns, 3.6621 ns/op
+OverheadActual  10: 65536 op, 214600.00 ns, 3.2745 ns/op
+OverheadActual  11: 65536 op, 318100.00 ns, 4.8538 ns/op
+OverheadActual  12: 65536 op, 257700.00 ns, 3.9322 ns/op
+OverheadActual  13: 65536 op, 253500.00 ns, 3.8681 ns/op
+OverheadActual  14: 65536 op, 319100.00 ns, 4.8691 ns/op
+OverheadActual  15: 65536 op, 167500.00 ns, 2.5558 ns/op
+OverheadActual  16: 65536 op, 304700.00 ns, 4.6494 ns/op
+OverheadActual  17: 65536 op, 146700.00 ns, 2.2385 ns/op
+OverheadActual  18: 65536 op, 158400.00 ns, 2.4170 ns/op
+OverheadActual  19: 65536 op, 301600.00 ns, 4.6021 ns/op
+OverheadActual  20: 65536 op, 299300.00 ns, 4.5670 ns/op
+
+WorkloadWarmup   1: 65536 op, 591175200.00 ns, 9.0206 us/op
+WorkloadWarmup   2: 65536 op, 679536800.00 ns, 10.3689 us/op
+WorkloadWarmup   3: 65536 op, 1081104800.00 ns, 16.4964 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 65536 op, 1050021500.00 ns, 16.0221 us/op
+WorkloadActual   2: 65536 op, 1050843600.00 ns, 16.0346 us/op
+WorkloadActual   3: 65536 op, 1053527800.00 ns, 16.0756 us/op
+WorkloadActual   4: 65536 op, 1029485900.00 ns, 15.7087 us/op
+WorkloadActual   5: 65536 op, 1041220000.00 ns, 15.8878 us/op
+
+// AfterActualRun
+WorkloadResult   1: 65536 op, 1049765900.00 ns, 16.0182 us/op
+WorkloadResult   2: 65536 op, 1050588000.00 ns, 16.0307 us/op
+WorkloadResult   3: 65536 op, 1053272200.00 ns, 16.0717 us/op
+WorkloadResult   4: 65536 op, 1029230300.00 ns, 15.7048 us/op
+WorkloadResult   5: 65536 op, 1040964400.00 ns, 15.8839 us/op
+GC:  4 0 0 706216472 65536
+Threading:  0 0 65536
+
+// AfterAll
+// Benchmark Process 57500 has exited with code 0.
+
+Mean = 15.942 μs, StdErr = 0.067 μs (0.42%), N = 5, StdDev = 0.150 μs
+Min = 15.705 μs, Q1 = 15.884 μs, Median = 16.018 μs, Q3 = 16.031 μs, Max = 16.072 μs
+IQR = 0.147 μs, LowerFence = 15.664 μs, UpperFence = 16.251 μs
+ConfidenceInterval = [15.364 μs; 16.520 μs] (CI 99.9%), Margin = 0.578 μs (3.63% of Mean)
+Skewness = -0.6, Kurtosis = 1.4, MValue = 2
+
+// ** Remained 14 (93.3%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 2m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: LosServiceBenchmarks.'LOS calculation with 500 samples': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.LosServiceBenchmarks.Calculate_MediumSamples --job "IterationCount=5, WarmupCount=3" --benchmarkId 1 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-BWLGNN(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 468300.00 ns, 468.3000 us/op
+WorkloadJitting  1: 1 op, 2495400.00 ns, 2.4954 ms/op
+
+OverheadJitting  2: 16 op, 686500.00 ns, 42.9062 us/op
+WorkloadJitting  2: 16 op, 2830200.00 ns, 176.8875 us/op
+
+WorkloadPilot    1: 16 op, 2848800.00 ns, 178.0500 us/op
+WorkloadPilot    2: 32 op, 4766200.00 ns, 148.9437 us/op
+WorkloadPilot    3: 64 op, 9500200.00 ns, 148.4406 us/op
+WorkloadPilot    4: 128 op, 18642800.00 ns, 145.6469 us/op
+WorkloadPilot    5: 256 op, 37224900.00 ns, 145.4098 us/op
+WorkloadPilot    6: 512 op, 79160400.00 ns, 154.6102 us/op
+WorkloadPilot    7: 1024 op, 180361100.00 ns, 176.1339 us/op
+WorkloadPilot    8: 2048 op, 190584200.00 ns, 93.0587 us/op
+WorkloadPilot    9: 4096 op, 334110500.00 ns, 81.5699 us/op
+WorkloadPilot   10: 8192 op, 644420400.00 ns, 78.6646 us/op
+
+OverheadWarmup   1: 8192 op, 27000.00 ns, 3.2959 ns/op
+OverheadWarmup   2: 8192 op, 25000.00 ns, 3.0518 ns/op
+OverheadWarmup   3: 8192 op, 25300.00 ns, 3.0884 ns/op
+OverheadWarmup   4: 8192 op, 25600.00 ns, 3.1250 ns/op
+OverheadWarmup   5: 8192 op, 25100.00 ns, 3.0640 ns/op
+OverheadWarmup   6: 8192 op, 45100.00 ns, 5.5054 ns/op
+OverheadWarmup   7: 8192 op, 25000.00 ns, 3.0518 ns/op
+
+OverheadActual   1: 8192 op, 24400.00 ns, 2.9785 ns/op
+OverheadActual   2: 8192 op, 32000.00 ns, 3.9062 ns/op
+OverheadActual   3: 8192 op, 26300.00 ns, 3.2104 ns/op
+OverheadActual   4: 8192 op, 26300.00 ns, 3.2104 ns/op
+OverheadActual   5: 8192 op, 26500.00 ns, 3.2349 ns/op
+OverheadActual   6: 8192 op, 26900.00 ns, 3.2837 ns/op
+OverheadActual   7: 8192 op, 30600.00 ns, 3.7354 ns/op
+OverheadActual   8: 8192 op, 35700.00 ns, 4.3579 ns/op
+OverheadActual   9: 8192 op, 28600.00 ns, 3.4912 ns/op
+OverheadActual  10: 8192 op, 30300.00 ns, 3.6987 ns/op
+OverheadActual  11: 8192 op, 34400.00 ns, 4.1992 ns/op
+OverheadActual  12: 8192 op, 38500.00 ns, 4.6997 ns/op
+OverheadActual  13: 8192 op, 31800.00 ns, 3.8818 ns/op
+OverheadActual  14: 8192 op, 31000.00 ns, 3.7842 ns/op
+OverheadActual  15: 8192 op, 27800.00 ns, 3.3936 ns/op
+OverheadActual  16: 8192 op, 36700.00 ns, 4.4800 ns/op
+OverheadActual  17: 8192 op, 48800.00 ns, 5.9570 ns/op
+OverheadActual  18: 8192 op, 22100.00 ns, 2.6978 ns/op
+OverheadActual  19: 8192 op, 20900.00 ns, 2.5513 ns/op
+OverheadActual  20: 8192 op, 21200.00 ns, 2.5879 ns/op
+
+WorkloadWarmup   1: 8192 op, 665269600.00 ns, 81.2097 us/op
+WorkloadWarmup   2: 8192 op, 725844000.00 ns, 88.6040 us/op
+WorkloadWarmup   3: 8192 op, 1206110100.00 ns, 147.2302 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 8192 op, 1194234100.00 ns, 145.7805 us/op
+WorkloadActual   2: 8192 op, 1229063800.00 ns, 150.0322 us/op
+WorkloadActual   3: 8192 op, 1257188300.00 ns, 153.4654 us/op
+WorkloadActual   4: 8192 op, 1263322900.00 ns, 154.2142 us/op
+WorkloadActual   5: 8192 op, 1289151100.00 ns, 157.3671 us/op
+
+// AfterActualRun
+WorkloadResult   1: 8192 op, 1194204650.00 ns, 145.7769 us/op
+WorkloadResult   2: 8192 op, 1229034350.00 ns, 150.0286 us/op
+WorkloadResult   3: 8192 op, 1257158850.00 ns, 153.4618 us/op
+WorkloadResult   4: 8192 op, 1263293450.00 ns, 154.2106 us/op
+WorkloadResult   5: 8192 op, 1289121650.00 ns, 157.3635 us/op
+GC:  5 0 0 855048728 8192
+Threading:  0 0 8192
+
+// AfterAll
+// Benchmark Process 51708 has exited with code 0.
+
+Mean = 152.168 μs, StdErr = 1.978 μs (1.30%), N = 5, StdDev = 4.423 μs
+Min = 145.777 μs, Q1 = 150.029 μs, Median = 153.462 μs, Q3 = 154.211 μs, Max = 157.363 μs
+IQR = 4.182 μs, LowerFence = 143.756 μs, UpperFence = 160.484 μs
+ConfidenceInterval = [135.136 μs; 169.201 μs] (CI 99.9%), Margin = 17.033 μs (11.19% of Mean)
+Skewness = -0.28, Kurtosis = 1.27, MValue = 2
+
+// ** Remained 13 (86.7%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 2m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: LosServiceBenchmarks.'LOS calculation with 2000 samples': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.LosServiceBenchmarks.Calculate_LargeSamples --job "IterationCount=5, WarmupCount=3" --benchmarkId 2 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-OAFBTB(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 273500.00 ns, 273.5000 us/op
+WorkloadJitting  1: 1 op, 4976000.00 ns, 4.9760 ms/op
+
+OverheadJitting  2: 16 op, 880700.00 ns, 55.0438 us/op
+WorkloadJitting  2: 16 op, 11599400.00 ns, 724.9625 us/op
+
+WorkloadPilot    1: 16 op, 7696000.00 ns, 481.0000 us/op
+WorkloadPilot    2: 32 op, 16788200.00 ns, 524.6313 us/op
+WorkloadPilot    3: 64 op, 34469000.00 ns, 538.5781 us/op
+WorkloadPilot    4: 128 op, 69263100.00 ns, 541.1180 us/op
+WorkloadPilot    5: 256 op, 144032400.00 ns, 562.6266 us/op
+WorkloadPilot    6: 512 op, 255873400.00 ns, 499.7527 us/op
+WorkloadPilot    7: 1024 op, 410703000.00 ns, 401.0771 us/op
+WorkloadPilot    8: 2048 op, 741192500.00 ns, 361.9104 us/op
+
+OverheadWarmup   1: 2048 op, 14500.00 ns, 7.0801 ns/op
+OverheadWarmup   2: 2048 op, 12000.00 ns, 5.8594 ns/op
+OverheadWarmup   3: 2048 op, 7000.00 ns, 3.4180 ns/op
+OverheadWarmup   4: 2048 op, 7200.00 ns, 3.5156 ns/op
+OverheadWarmup   5: 2048 op, 7200.00 ns, 3.5156 ns/op
+OverheadWarmup   6: 2048 op, 11600.00 ns, 5.6641 ns/op
+OverheadWarmup   7: 2048 op, 9600.00 ns, 4.6875 ns/op
+
+OverheadActual   1: 2048 op, 8500.00 ns, 4.1504 ns/op
+OverheadActual   2: 2048 op, 8000.00 ns, 3.9062 ns/op
+OverheadActual   3: 2048 op, 7500.00 ns, 3.6621 ns/op
+OverheadActual   4: 2048 op, 8200.00 ns, 4.0039 ns/op
+OverheadActual   5: 2048 op, 7800.00 ns, 3.8086 ns/op
+OverheadActual   6: 2048 op, 7600.00 ns, 3.7109 ns/op
+OverheadActual   7: 2048 op, 7600.00 ns, 3.7109 ns/op
+OverheadActual   8: 2048 op, 7200.00 ns, 3.5156 ns/op
+OverheadActual   9: 2048 op, 7500.00 ns, 3.6621 ns/op
+OverheadActual  10: 2048 op, 7400.00 ns, 3.6133 ns/op
+OverheadActual  11: 2048 op, 7500.00 ns, 3.6621 ns/op
+OverheadActual  12: 2048 op, 7200.00 ns, 3.5156 ns/op
+OverheadActual  13: 2048 op, 7000.00 ns, 3.4180 ns/op
+OverheadActual  14: 2048 op, 7000.00 ns, 3.4180 ns/op
+OverheadActual  15: 2048 op, 7500.00 ns, 3.6621 ns/op
+OverheadActual  16: 2048 op, 7500.00 ns, 3.6621 ns/op
+
+WorkloadWarmup   1: 2048 op, 729601000.00 ns, 356.2505 us/op
+WorkloadWarmup   2: 2048 op, 1059293500.00 ns, 517.2332 us/op
+WorkloadWarmup   3: 2048 op, 1364287800.00 ns, 666.1562 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 2048 op, 798059500.00 ns, 389.6775 us/op
+WorkloadActual   2: 2048 op, 709870300.00 ns, 346.6164 us/op
+WorkloadActual   3: 2048 op, 689439900.00 ns, 336.6406 us/op
+WorkloadActual   4: 2048 op, 700059100.00 ns, 341.8257 us/op
+WorkloadActual   5: 2048 op, 696751300.00 ns, 340.2106 us/op
+
+// AfterActualRun
+WorkloadResult   1: 2048 op, 709862800.00 ns, 346.6127 us/op
+WorkloadResult   2: 2048 op, 689432400.00 ns, 336.6369 us/op
+WorkloadResult   3: 2048 op, 700051600.00 ns, 341.8221 us/op
+WorkloadResult   4: 2048 op, 696743800.00 ns, 340.2069 us/op
+GC:  5 1 0 852738584 2048
+Threading:  0 0 2048
+
+// AfterAll
+// Benchmark Process 45588 has exited with code 0.
+
+Mean = 341.320 μs, StdErr = 2.070 μs (0.61%), N = 4, StdDev = 4.141 μs
+Min = 336.637 μs, Q1 = 339.314 μs, Median = 341.015 μs, Q3 = 343.020 μs, Max = 346.613 μs
+IQR = 3.705 μs, LowerFence = 333.756 μs, UpperFence = 348.578 μs
+ConfidenceInterval = [314.563 μs; 368.076 μs] (CI 99.9%), Margin = 26.757 μs (7.84% of Mean)
+Skewness = 0.16, Kurtosis = 1.08, MValue = 2
+
+// ** Remained 12 (80.0%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 2m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: LosServiceBenchmarks.'LOS calculation with high frequency (28 GHz)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.LosServiceBenchmarks.Calculate_HighFrequency --job "IterationCount=5, WarmupCount=3" --benchmarkId 3 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-CQSZUO(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 573200.00 ns, 573.2000 us/op
+WorkloadJitting  1: 1 op, 3894500.00 ns, 3.8945 ms/op
+
+OverheadJitting  2: 16 op, 383300.00 ns, 23.9563 us/op
+WorkloadJitting  2: 16 op, 649200.00 ns, 40.5750 us/op
+
+WorkloadPilot    1: 16 op, 377900.00 ns, 23.6187 us/op
+WorkloadPilot    2: 32 op, 651600.00 ns, 20.3625 us/op
+WorkloadPilot    3: 64 op, 1033400.00 ns, 16.1469 us/op
+WorkloadPilot    4: 128 op, 2734100.00 ns, 21.3602 us/op
+WorkloadPilot    5: 256 op, 5362100.00 ns, 20.9457 us/op
+WorkloadPilot    6: 512 op, 9847000.00 ns, 19.2324 us/op
+WorkloadPilot    7: 1024 op, 18701100.00 ns, 18.2628 us/op
+WorkloadPilot    8: 2048 op, 34527000.00 ns, 16.8589 us/op
+WorkloadPilot    9: 4096 op, 74647700.00 ns, 18.2245 us/op
+WorkloadPilot   10: 8192 op, 149975900.00 ns, 18.3076 us/op
+WorkloadPilot   11: 16384 op, 172564500.00 ns, 10.5325 us/op
+WorkloadPilot   12: 32768 op, 284903800.00 ns, 8.6946 us/op
+WorkloadPilot   13: 65536 op, 545888800.00 ns, 8.3296 us/op
+
+OverheadWarmup   1: 65536 op, 185200.00 ns, 2.8259 ns/op
+OverheadWarmup   2: 65536 op, 167400.00 ns, 2.5543 ns/op
+OverheadWarmup   3: 65536 op, 307200.00 ns, 4.6875 ns/op
+OverheadWarmup   4: 65536 op, 287100.00 ns, 4.3808 ns/op
+OverheadWarmup   5: 65536 op, 329400.00 ns, 5.0262 ns/op
+OverheadWarmup   6: 65536 op, 539700.00 ns, 8.2352 ns/op
+OverheadWarmup   7: 65536 op, 554600.00 ns, 8.4625 ns/op
+OverheadWarmup   8: 65536 op, 194500.00 ns, 2.9678 ns/op
+
+OverheadActual   1: 65536 op, 254800.00 ns, 3.8879 ns/op
+OverheadActual   2: 65536 op, 152000.00 ns, 2.3193 ns/op
+OverheadActual   3: 65536 op, 142300.00 ns, 2.1713 ns/op
+OverheadActual   4: 65536 op, 143400.00 ns, 2.1881 ns/op
+OverheadActual   5: 65536 op, 211100.00 ns, 3.2211 ns/op
+OverheadActual   6: 65536 op, 231100.00 ns, 3.5263 ns/op
+OverheadActual   7: 65536 op, 159700.00 ns, 2.4368 ns/op
+OverheadActual   8: 65536 op, 312400.00 ns, 4.7668 ns/op
+OverheadActual   9: 65536 op, 153500.00 ns, 2.3422 ns/op
+OverheadActual  10: 65536 op, 228200.00 ns, 3.4821 ns/op
+OverheadActual  11: 65536 op, 319800.00 ns, 4.8798 ns/op
+OverheadActual  12: 65536 op, 158300.00 ns, 2.4155 ns/op
+OverheadActual  13: 65536 op, 258100.00 ns, 3.9383 ns/op
+OverheadActual  14: 65536 op, 230200.00 ns, 3.5126 ns/op
+OverheadActual  15: 65536 op, 202000.00 ns, 3.0823 ns/op
+OverheadActual  16: 65536 op, 217500.00 ns, 3.3188 ns/op
+OverheadActual  17: 65536 op, 285100.00 ns, 4.3503 ns/op
+OverheadActual  18: 65536 op, 143400.00 ns, 2.1881 ns/op
+OverheadActual  19: 65536 op, 257400.00 ns, 3.9276 ns/op
+OverheadActual  20: 65536 op, 199300.00 ns, 3.0411 ns/op
+
+WorkloadWarmup   1: 65536 op, 602977700.00 ns, 9.2007 us/op
+WorkloadWarmup   2: 65536 op, 581178500.00 ns, 8.8681 us/op
+WorkloadWarmup   3: 65536 op, 540776200.00 ns, 8.2516 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 65536 op, 564257200.00 ns, 8.6099 us/op
+WorkloadActual   2: 65536 op, 577530400.00 ns, 8.8124 us/op
+WorkloadActual   3: 65536 op, 550786200.00 ns, 8.4043 us/op
+WorkloadActual   4: 65536 op, 562325200.00 ns, 8.5804 us/op
+WorkloadActual   5: 65536 op, 563151900.00 ns, 8.5930 us/op
+
+// AfterActualRun
+WorkloadResult   1: 65536 op, 564042900.00 ns, 8.6066 us/op
+WorkloadResult   2: 65536 op, 550571900.00 ns, 8.4011 us/op
+WorkloadResult   3: 65536 op, 562110900.00 ns, 8.5771 us/op
+WorkloadResult   4: 65536 op, 562937600.00 ns, 8.5897 us/op
+GC:  4 0 0 714605752 65536
+Threading:  0 0 65536
+
+// AfterAll
+// Benchmark Process 40968 has exited with code 0.
+
+Mean = 8.544 μs, StdErr = 0.048 μs (0.56%), N = 4, StdDev = 0.096 μs
+Min = 8.401 μs, Q1 = 8.533 μs, Median = 8.583 μs, Q3 = 8.594 μs, Max = 8.607 μs
+IQR = 0.061 μs, LowerFence = 8.442 μs, UpperFence = 8.685 μs
+ConfidenceInterval = [7.924 μs; 9.163 μs] (CI 99.9%), Margin = 0.619 μs (7.25% of Mean)
+Skewness = -0.71, Kurtosis = 1.29, MValue = 2
+
+// ** Remained 11 (73.3%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 1m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: LosServiceBenchmarks.'LOS calculation with low frequency (400 MHz)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.LosServiceBenchmarks.Calculate_LowFrequency --job "IterationCount=5, WarmupCount=3" --benchmarkId 4 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-XUMVMP(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 264400.00 ns, 264.4000 us/op
+WorkloadJitting  1: 1 op, 2100200.00 ns, 2.1002 ms/op
+
+OverheadJitting  2: 16 op, 537400.00 ns, 33.5875 us/op
+WorkloadJitting  2: 16 op, 1157900.00 ns, 72.3688 us/op
+
+WorkloadPilot    1: 16 op, 278600.00 ns, 17.4125 us/op
+WorkloadPilot    2: 32 op, 712300.00 ns, 22.2594 us/op
+WorkloadPilot    3: 64 op, 1413300.00 ns, 22.0828 us/op
+WorkloadPilot    4: 128 op, 2871700.00 ns, 22.4352 us/op
+WorkloadPilot    5: 256 op, 4797800.00 ns, 18.7414 us/op
+WorkloadPilot    6: 512 op, 8326800.00 ns, 16.2633 us/op
+WorkloadPilot    7: 1024 op, 15975500.00 ns, 15.6011 us/op
+WorkloadPilot    8: 2048 op, 31987800.00 ns, 15.6190 us/op
+WorkloadPilot    9: 4096 op, 69121000.00 ns, 16.8752 us/op
+WorkloadPilot   10: 8192 op, 150506300.00 ns, 18.3724 us/op
+WorkloadPilot   11: 16384 op, 180809900.00 ns, 11.0358 us/op
+WorkloadPilot   12: 32768 op, 282127400.00 ns, 8.6098 us/op
+WorkloadPilot   13: 65536 op, 549333500.00 ns, 8.3822 us/op
+
+OverheadWarmup   1: 65536 op, 175800.00 ns, 2.6825 ns/op
+OverheadWarmup   2: 65536 op, 173700.00 ns, 2.6505 ns/op
+OverheadWarmup   3: 65536 op, 154800.00 ns, 2.3621 ns/op
+OverheadWarmup   4: 65536 op, 143800.00 ns, 2.1942 ns/op
+OverheadWarmup   5: 65536 op, 216000.00 ns, 3.2959 ns/op
+OverheadWarmup   6: 65536 op, 225300.00 ns, 3.4378 ns/op
+OverheadWarmup   7: 65536 op, 148900.00 ns, 2.2720 ns/op
+OverheadWarmup   8: 65536 op, 169200.00 ns, 2.5818 ns/op
+OverheadWarmup   9: 65536 op, 230000.00 ns, 3.5095 ns/op
+OverheadWarmup  10: 65536 op, 224300.00 ns, 3.4225 ns/op
+
+OverheadActual   1: 65536 op, 189000.00 ns, 2.8839 ns/op
+OverheadActual   2: 65536 op, 154400.00 ns, 2.3560 ns/op
+OverheadActual   3: 65536 op, 152700.00 ns, 2.3300 ns/op
+OverheadActual   4: 65536 op, 221700.00 ns, 3.3829 ns/op
+OverheadActual   5: 65536 op, 150200.00 ns, 2.2919 ns/op
+OverheadActual   6: 65536 op, 190100.00 ns, 2.9007 ns/op
+OverheadActual   7: 65536 op, 293100.00 ns, 4.4724 ns/op
+OverheadActual   8: 65536 op, 191500.00 ns, 2.9221 ns/op
+OverheadActual   9: 65536 op, 178200.00 ns, 2.7191 ns/op
+OverheadActual  10: 65536 op, 168000.00 ns, 2.5635 ns/op
+OverheadActual  11: 65536 op, 162600.00 ns, 2.4811 ns/op
+OverheadActual  12: 65536 op, 248700.00 ns, 3.7949 ns/op
+OverheadActual  13: 65536 op, 221000.00 ns, 3.3722 ns/op
+OverheadActual  14: 65536 op, 167900.00 ns, 2.5620 ns/op
+OverheadActual  15: 65536 op, 185000.00 ns, 2.8229 ns/op
+OverheadActual  16: 65536 op, 147800.00 ns, 2.2552 ns/op
+OverheadActual  17: 65536 op, 143700.00 ns, 2.1927 ns/op
+OverheadActual  18: 65536 op, 230700.00 ns, 3.5202 ns/op
+OverheadActual  19: 65536 op, 198300.00 ns, 3.0258 ns/op
+OverheadActual  20: 65536 op, 185600.00 ns, 2.8320 ns/op
+
+WorkloadWarmup   1: 65536 op, 576684400.00 ns, 8.7995 us/op
+WorkloadWarmup   2: 65536 op, 560100400.00 ns, 8.5465 us/op
+WorkloadWarmup   3: 65536 op, 551237700.00 ns, 8.4112 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 65536 op, 552511900.00 ns, 8.4307 us/op
+WorkloadActual   2: 65536 op, 556929500.00 ns, 8.4981 us/op
+WorkloadActual   3: 65536 op, 609472400.00 ns, 9.2998 us/op
+WorkloadActual   4: 65536 op, 584181200.00 ns, 8.9139 us/op
+WorkloadActual   5: 65536 op, 555235900.00 ns, 8.4722 us/op
+
+// AfterActualRun
+WorkloadResult   1: 65536 op, 552326600.00 ns, 8.4278 us/op
+WorkloadResult   2: 65536 op, 556744200.00 ns, 8.4952 us/op
+WorkloadResult   3: 65536 op, 609287100.00 ns, 9.2970 us/op
+WorkloadResult   4: 65536 op, 583995900.00 ns, 8.9111 us/op
+WorkloadResult   5: 65536 op, 555050600.00 ns, 8.4694 us/op
+GC:  4 0 0 714605416 65536
+Threading:  0 0 65536
+
+// AfterAll
+// Benchmark Process 9376 has exited with code 0.
+
+Mean = 8.720 μs, StdErr = 0.169 μs (1.93%), N = 5, StdDev = 0.377 μs
+Min = 8.428 μs, Q1 = 8.469 μs, Median = 8.495 μs, Q3 = 8.911 μs, Max = 9.297 μs
+IQR = 0.442 μs, LowerFence = 7.807 μs, UpperFence = 9.574 μs
+ConfidenceInterval = [7.269 μs; 10.171 μs] (CI 99.9%), Margin = 1.451 μs (16.64% of Mean)
+Skewness = 0.55, Kurtosis = 1.25, MValue = 2
+
+// ** Remained 10 (66.7%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 1m from now) **
+Successfully reverted power plan (GUID: 381b4222-f694-41f0-9685-ff5bb260df2e FriendlyName: Balanced)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\GeoTesterApi.Benchmarks.LosServiceBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\GeoTesterApi.Benchmarks.LosServiceBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\GeoTesterApi.Benchmarks.LosServiceBenchmarks-report.html
+
+// * Detailed results *
+LosServiceBenchmarks.'LOS calculation with 50 samples': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 15.942 μs, StdErr = 0.067 μs (0.42%), N = 5, StdDev = 0.150 μs
+Min = 15.705 μs, Q1 = 15.884 μs, Median = 16.018 μs, Q3 = 16.031 μs, Max = 16.072 μs
+IQR = 0.147 μs, LowerFence = 15.664 μs, UpperFence = 16.251 μs
+ConfidenceInterval = [15.364 μs; 16.520 μs] (CI 99.9%), Margin = 0.578 μs (3.63% of Mean)
+Skewness = -0.6, Kurtosis = 1.4, MValue = 2
+-------------------- Histogram --------------------
+[15.590 μs ; 16.138 μs) | @@@@@
+---------------------------------------------------
+
+LosServiceBenchmarks.'LOS calculation with 500 samples': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 152.168 μs, StdErr = 1.978 μs (1.30%), N = 5, StdDev = 4.423 μs
+Min = 145.777 μs, Q1 = 150.029 μs, Median = 153.462 μs, Q3 = 154.211 μs, Max = 157.363 μs
+IQR = 4.182 μs, LowerFence = 143.756 μs, UpperFence = 160.484 μs
+ConfidenceInterval = [135.136 μs; 169.201 μs] (CI 99.9%), Margin = 17.033 μs (11.19% of Mean)
+Skewness = -0.28, Kurtosis = 1.27, MValue = 2
+-------------------- Histogram --------------------
+[144.508 μs ; 152.018 μs) | @@
+[152.018 μs ; 158.808 μs) | @@@
+---------------------------------------------------
+
+LosServiceBenchmarks.'LOS calculation with 2000 samples': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 341.320 μs, StdErr = 2.070 μs (0.61%), N = 4, StdDev = 4.141 μs
+Min = 336.637 μs, Q1 = 339.314 μs, Median = 341.015 μs, Q3 = 343.020 μs, Max = 346.613 μs
+IQR = 3.705 μs, LowerFence = 333.756 μs, UpperFence = 348.578 μs
+ConfidenceInterval = [314.563 μs; 368.076 μs] (CI 99.9%), Margin = 26.757 μs (7.84% of Mean)
+Skewness = 0.16, Kurtosis = 1.08, MValue = 2
+-------------------- Histogram --------------------
+[335.806 μs ; 342.653 μs) | @@@
+[342.653 μs ; 350.036 μs) | @
+---------------------------------------------------
+
+LosServiceBenchmarks.'LOS calculation with high frequency (28 GHz)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 8.544 μs, StdErr = 0.048 μs (0.56%), N = 4, StdDev = 0.096 μs
+Min = 8.401 μs, Q1 = 8.533 μs, Median = 8.583 μs, Q3 = 8.594 μs, Max = 8.607 μs
+IQR = 0.061 μs, LowerFence = 8.442 μs, UpperFence = 8.685 μs
+ConfidenceInterval = [7.924 μs; 9.163 μs] (CI 99.9%), Margin = 0.619 μs (7.25% of Mean)
+Skewness = -0.71, Kurtosis = 1.29, MValue = 2
+-------------------- Histogram --------------------
+[8.322 μs ; 8.506 μs) | @
+[8.506 μs ; 8.686 μs) | @@@
+---------------------------------------------------
+
+LosServiceBenchmarks.'LOS calculation with low frequency (400 MHz)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 8.720 μs, StdErr = 0.169 μs (1.93%), N = 5, StdDev = 0.377 μs
+Min = 8.428 μs, Q1 = 8.469 μs, Median = 8.495 μs, Q3 = 8.911 μs, Max = 9.297 μs
+IQR = 0.442 μs, LowerFence = 7.807 μs, UpperFence = 9.574 μs
+ConfidenceInterval = [7.269 μs; 10.171 μs] (CI 99.9%), Margin = 1.451 μs (16.64% of Mean)
+Skewness = 0.55, Kurtosis = 1.25, MValue = 2
+-------------------- Histogram --------------------
+[8.380 μs ; 8.959 μs) | @@@@
+[8.959 μs ; 9.586 μs) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.2, OS=Windows 11 (10.0.26200.8246)
+AMD Ryzen AI 7 350 w/ Radeon 860M, 1 CPU, 16 logical and 8 physical cores
+.NET SDK=10.0.202
+  [Host]     : .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+  Job-TVZODC : .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+
+IterationCount=5  WarmupCount=3  
+
+|                                         Method |       Mean |      Error |    StdDev |        Min |        Max |     Median |   Gen0 |   Gen1 | Allocated |
+|----------------------------------------------- |-----------:|-----------:|----------:|-----------:|-----------:|-----------:|-------:|-------:|----------:|
+|              'LOS calculation with 50 samples' |  15.942 μs |  0.5780 μs | 0.1501 μs |  15.705 μs |  16.072 μs |  16.018 μs | 0.0610 |      - |  10.52 KB |
+|             'LOS calculation with 500 samples' | 152.168 μs | 17.0325 μs | 4.4233 μs | 145.777 μs | 157.363 μs | 153.462 μs | 0.6104 |      - | 101.93 KB |
+|            'LOS calculation with 2000 samples' | 341.320 μs | 26.7568 μs | 4.1406 μs | 336.637 μs | 346.613 μs | 341.015 μs | 2.4414 | 0.4883 | 406.62 KB |
+| 'LOS calculation with high frequency (28 GHz)' |   8.544 μs |  0.6192 μs | 0.0958 μs |   8.401 μs |   8.607 μs |   8.583 μs | 0.0610 |      - |  10.65 KB |
+| 'LOS calculation with low frequency (400 MHz)' |   8.720 μs |  1.4512 μs | 0.3769 μs |   8.428 μs |   9.297 μs |   8.495 μs | 0.0610 |      - |  10.65 KB |
+
+// * Hints *
+Outliers
+  LosServiceBenchmarks.'LOS calculation with 2000 samples': IterationCount=5, WarmupCount=3            -> 1 outlier  was  removed (389.68 μs)
+  LosServiceBenchmarks.'LOS calculation with high frequency (28 GHz)': IterationCount=5, WarmupCount=3 -> 1 outlier  was  removed, 2 outliers were detected (8.40 μs, 8.81 μs)
+
+// * Legends *
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Min       : Minimum
+  Max       : Maximum
+  Median    : Value separating the higher half of all measurements (50th percentile)
+  Gen0      : GC Generation 0 collects per 1000 operations
+  Gen1      : GC Generation 1 collects per 1000 operations
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 μs      : 1 Microsecond (0.000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:47 (47.39 sec), executed benchmarks: 5
+
+// Found 4 benchmarks:
+//   PolygonServiceBenchmarks.'Create simple rectangular polygon': Job-TVZODC(IterationCount=5, WarmupCount=3)
+//   PolygonServiceBenchmarks.'Create multi-polygon with 2 rectangles': Job-TVZODC(IterationCount=5, WarmupCount=3)
+//   PolygonServiceBenchmarks.'Create donut polygon with hole': Job-TVZODC(IterationCount=5, WarmupCount=3)
+//   PolygonServiceBenchmarks.'Create and parse multi-polygon from WKT': Job-TVZODC(IterationCount=5, WarmupCount=3)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: PolygonServiceBenchmarks.'Create simple rectangular polygon': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.PolygonServiceBenchmarks.CreatePolygon --job "IterationCount=5, WarmupCount=3" --benchmarkId 5 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-BDJYGR(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 132300.00 ns, 132.3000 us/op
+WorkloadJitting  1: 1 op, 52504100.00 ns, 52.5041 ms/op
+
+WorkloadPilot    1: 2 op, 43800.00 ns, 21.9000 us/op
+WorkloadPilot    2: 3 op, 24200.00 ns, 8.0667 us/op
+WorkloadPilot    3: 4 op, 12700.00 ns, 3.1750 us/op
+WorkloadPilot    4: 5 op, 27900.00 ns, 5.5800 us/op
+WorkloadPilot    5: 6 op, 24600.00 ns, 4.1000 us/op
+WorkloadPilot    6: 7 op, 36300.00 ns, 5.1857 us/op
+WorkloadPilot    7: 8 op, 24000.00 ns, 3.0000 us/op
+WorkloadPilot    8: 9 op, 38500.00 ns, 4.2778 us/op
+WorkloadPilot    9: 10 op, 26400.00 ns, 2.6400 us/op
+WorkloadPilot   10: 11 op, 27800.00 ns, 2.5273 us/op
+WorkloadPilot   11: 12 op, 31700.00 ns, 2.6417 us/op
+WorkloadPilot   12: 13 op, 30800.00 ns, 2.3692 us/op
+WorkloadPilot   13: 14 op, 38400.00 ns, 2.7429 us/op
+WorkloadPilot   14: 15 op, 32500.00 ns, 2.1667 us/op
+WorkloadPilot   15: 16 op, 47100.00 ns, 2.9438 us/op
+WorkloadPilot   16: 32 op, 45700.00 ns, 1.4281 us/op
+WorkloadPilot   17: 64 op, 70100.00 ns, 1.0953 us/op
+WorkloadPilot   18: 128 op, 109200.00 ns, 853.1250 ns/op
+WorkloadPilot   19: 256 op, 320300.00 ns, 1.2512 us/op
+WorkloadPilot   20: 512 op, 277500.00 ns, 541.9922 ns/op
+WorkloadPilot   21: 1024 op, 613400.00 ns, 599.0234 ns/op
+WorkloadPilot   22: 2048 op, 978700.00 ns, 477.8809 ns/op
+WorkloadPilot   23: 4096 op, 1577900.00 ns, 385.2295 ns/op
+WorkloadPilot   24: 8192 op, 3228000.00 ns, 394.0430 ns/op
+WorkloadPilot   25: 16384 op, 8482400.00 ns, 517.7246 ns/op
+WorkloadPilot   26: 32768 op, 15843800.00 ns, 483.5144 ns/op
+WorkloadPilot   27: 65536 op, 30143400.00 ns, 459.9518 ns/op
+WorkloadPilot   28: 131072 op, 57367000.00 ns, 437.6755 ns/op
+WorkloadPilot   29: 262144 op, 81277100.00 ns, 310.0475 ns/op
+WorkloadPilot   30: 524288 op, 108136900.00 ns, 206.2548 ns/op
+WorkloadPilot   31: 1048576 op, 219363400.00 ns, 209.2012 ns/op
+WorkloadPilot   32: 2097152 op, 376518600.00 ns, 179.5381 ns/op
+WorkloadPilot   33: 4194304 op, 739279100.00 ns, 176.2579 ns/op
+
+WorkloadWarmup   1: 4194304 op, 754389100.00 ns, 179.8604 ns/op
+WorkloadWarmup   2: 4194304 op, 731577500.00 ns, 174.4217 ns/op
+WorkloadWarmup   3: 4194304 op, 722465900.00 ns, 172.2493 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 4194304 op, 735540400.00 ns, 175.3665 ns/op
+WorkloadActual   2: 4194304 op, 734419100.00 ns, 175.0992 ns/op
+WorkloadActual   3: 4194304 op, 727981400.00 ns, 173.5643 ns/op
+WorkloadActual   4: 4194304 op, 805163000.00 ns, 191.9658 ns/op
+WorkloadActual   5: 4194304 op, 741628000.00 ns, 176.8179 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 4194304 op, 735540400.00 ns, 175.3665 ns/op
+WorkloadResult   2: 4194304 op, 734419100.00 ns, 175.0992 ns/op
+WorkloadResult   3: 4194304 op, 727981400.00 ns, 173.5643 ns/op
+WorkloadResult   4: 4194304 op, 741628000.00 ns, 176.8179 ns/op
+GC:  25 0 0 4160749568 4194304
+Threading:  0 0 4194304
+
+// AfterAll
+// Benchmark Process 14528 has exited with code 0.
+
+Mean = 175.212 ns, StdErr = 0.666 ns (0.38%), N = 4, StdDev = 1.333 ns
+Min = 173.564 ns, Q1 = 174.715 ns, Median = 175.233 ns, Q3 = 175.729 ns, Max = 176.818 ns
+IQR = 1.014 ns, LowerFence = 173.195 ns, UpperFence = 177.250 ns
+ConfidenceInterval = [166.598 ns; 183.826 ns] (CI 99.9%), Margin = 8.614 ns (4.92% of Mean)
+Skewness = -0.03, Kurtosis = 1.11, MValue = 2
+
+// ** Remained 9 (60.0%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 1m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: PolygonServiceBenchmarks.'Create multi-polygon with 2 rectangles': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.PolygonServiceBenchmarks.CreateMultiPolygon --job "IterationCount=5, WarmupCount=3" --benchmarkId 6 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-OUDEAI(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 180500.00 ns, 180.5000 us/op
+WorkloadJitting  1: 1 op, 389018900.00 ns, 389.0189 ms/op
+
+OverheadJitting  2: 1 op, 900.00 ns, 900.0000 ns/op
+WorkloadJitting  2: 1 op, 858300.00 ns, 858.3000 us/op
+
+OverheadJitting  3: 16 op, 160900.00 ns, 10.0563 us/op
+WorkloadJitting  3: 16 op, 1837600.00 ns, 114.8500 us/op
+
+WorkloadPilot    1: 16 op, 1049200.00 ns, 65.5750 us/op
+WorkloadPilot    2: 32 op, 2266500.00 ns, 70.8281 us/op
+WorkloadPilot    3: 64 op, 3517400.00 ns, 54.9594 us/op
+WorkloadPilot    4: 128 op, 7182500.00 ns, 56.1133 us/op
+WorkloadPilot    5: 256 op, 14826600.00 ns, 57.9164 us/op
+WorkloadPilot    6: 512 op, 31207900.00 ns, 60.9529 us/op
+WorkloadPilot    7: 1024 op, 54056300.00 ns, 52.7894 us/op
+WorkloadPilot    8: 2048 op, 159821400.00 ns, 78.0378 us/op
+WorkloadPilot    9: 4096 op, 377870600.00 ns, 92.2536 us/op
+WorkloadPilot   10: 8192 op, 233431100.00 ns, 28.4950 us/op
+WorkloadPilot   11: 16384 op, 284562500.00 ns, 17.3683 us/op
+WorkloadPilot   12: 32768 op, 530193400.00 ns, 16.1802 us/op
+
+OverheadWarmup   1: 32768 op, 50400.00 ns, 1.5381 ns/op
+OverheadWarmup   2: 32768 op, 46000.00 ns, 1.4038 ns/op
+OverheadWarmup   3: 32768 op, 48800.00 ns, 1.4893 ns/op
+OverheadWarmup   4: 32768 op, 48100.00 ns, 1.4679 ns/op
+OverheadWarmup   5: 32768 op, 61700.00 ns, 1.8829 ns/op
+OverheadWarmup   6: 32768 op, 53900.00 ns, 1.6449 ns/op
+
+OverheadActual   1: 32768 op, 53500.00 ns, 1.6327 ns/op
+OverheadActual   2: 32768 op, 52600.00 ns, 1.6052 ns/op
+OverheadActual   3: 32768 op, 48700.00 ns, 1.4862 ns/op
+OverheadActual   4: 32768 op, 111200.00 ns, 3.3936 ns/op
+OverheadActual   5: 32768 op, 54800.00 ns, 1.6724 ns/op
+OverheadActual   6: 32768 op, 61500.00 ns, 1.8768 ns/op
+OverheadActual   7: 32768 op, 82800.00 ns, 2.5269 ns/op
+OverheadActual   8: 32768 op, 100700.00 ns, 3.0731 ns/op
+OverheadActual   9: 32768 op, 82700.00 ns, 2.5238 ns/op
+OverheadActual  10: 32768 op, 62800.00 ns, 1.9165 ns/op
+OverheadActual  11: 32768 op, 93400.00 ns, 2.8503 ns/op
+OverheadActual  12: 32768 op, 72900.00 ns, 2.2247 ns/op
+OverheadActual  13: 32768 op, 59700.00 ns, 1.8219 ns/op
+OverheadActual  14: 32768 op, 57400.00 ns, 1.7517 ns/op
+OverheadActual  15: 32768 op, 59400.00 ns, 1.8127 ns/op
+OverheadActual  16: 32768 op, 60600.00 ns, 1.8494 ns/op
+OverheadActual  17: 32768 op, 53400.00 ns, 1.6296 ns/op
+OverheadActual  18: 32768 op, 42700.00 ns, 1.3031 ns/op
+OverheadActual  19: 32768 op, 71200.00 ns, 2.1729 ns/op
+OverheadActual  20: 32768 op, 61500.00 ns, 1.8768 ns/op
+
+WorkloadWarmup   1: 32768 op, 575461000.00 ns, 17.5617 us/op
+WorkloadWarmup   2: 32768 op, 525434600.00 ns, 16.0350 us/op
+WorkloadWarmup   3: 32768 op, 529944800.00 ns, 16.1726 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 32768 op, 521714200.00 ns, 15.9215 us/op
+WorkloadActual   2: 32768 op, 532368100.00 ns, 16.2466 us/op
+WorkloadActual   3: 32768 op, 540052300.00 ns, 16.4811 us/op
+WorkloadActual   4: 32768 op, 521811000.00 ns, 15.9244 us/op
+WorkloadActual   5: 32768 op, 517847600.00 ns, 15.8035 us/op
+
+// AfterActualRun
+WorkloadResult   1: 32768 op, 521653150.00 ns, 15.9196 us/op
+WorkloadResult   2: 32768 op, 532307050.00 ns, 16.2447 us/op
+WorkloadResult   3: 32768 op, 539991250.00 ns, 16.4792 us/op
+WorkloadResult   4: 32768 op, 521749950.00 ns, 15.9225 us/op
+WorkloadResult   5: 32768 op, 517786550.00 ns, 15.8016 us/op
+GC:  6 0 0 1038888096 32768
+Threading:  0 0 32768
+
+// AfterAll
+// Benchmark Process 41492 has exited with code 0.
+
+Mean = 16.074 μs, StdErr = 0.125 μs (0.78%), N = 5, StdDev = 0.280 μs
+Min = 15.802 μs, Q1 = 15.920 μs, Median = 15.923 μs, Q3 = 16.245 μs, Max = 16.479 μs
+IQR = 0.325 μs, LowerFence = 15.432 μs, UpperFence = 16.732 μs
+ConfidenceInterval = [14.994 μs; 17.153 μs] (CI 99.9%), Margin = 1.079 μs (6.72% of Mean)
+Skewness = 0.4, Kurtosis = 1.12, MValue = 2
+
+// ** Remained 8 (53.3%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 1m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: PolygonServiceBenchmarks.'Create donut polygon with hole': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.PolygonServiceBenchmarks.CreateDonutPolygon --job "IterationCount=5, WarmupCount=3" --benchmarkId 7 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-AFMJXE(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 641600.00 ns, 641.6000 us/op
+WorkloadJitting  1: 1 op, 3175900.00 ns, 3.1759 ms/op
+
+OverheadJitting  2: 16 op, 346000.00 ns, 21.6250 us/op
+WorkloadJitting  2: 16 op, 606400.00 ns, 37.9000 us/op
+
+WorkloadPilot    1: 16 op, 222800.00 ns, 13.9250 us/op
+WorkloadPilot    2: 32 op, 452300.00 ns, 14.1344 us/op
+WorkloadPilot    3: 64 op, 790200.00 ns, 12.3469 us/op
+WorkloadPilot    4: 128 op, 1312800.00 ns, 10.2562 us/op
+WorkloadPilot    5: 256 op, 2142000.00 ns, 8.3672 us/op
+WorkloadPilot    6: 512 op, 3235800.00 ns, 6.3199 us/op
+WorkloadPilot    7: 1024 op, 5140900.00 ns, 5.0204 us/op
+WorkloadPilot    8: 2048 op, 9712700.00 ns, 4.7425 us/op
+WorkloadPilot    9: 4096 op, 19794100.00 ns, 4.8325 us/op
+WorkloadPilot   10: 8192 op, 39293600.00 ns, 4.7966 us/op
+WorkloadPilot   11: 16384 op, 84052700.00 ns, 5.1302 us/op
+WorkloadPilot   12: 32768 op, 110373200.00 ns, 3.3683 us/op
+WorkloadPilot   13: 65536 op, 180569500.00 ns, 2.7553 us/op
+WorkloadPilot   14: 131072 op, 318669200.00 ns, 2.4313 us/op
+WorkloadPilot   15: 262144 op, 575854600.00 ns, 2.1967 us/op
+
+OverheadWarmup   1: 262144 op, 358800.00 ns, 1.3687 ns/op
+OverheadWarmup   2: 262144 op, 350800.00 ns, 1.3382 ns/op
+OverheadWarmup   3: 262144 op, 341800.00 ns, 1.3039 ns/op
+OverheadWarmup   4: 262144 op, 382800.00 ns, 1.4603 ns/op
+OverheadWarmup   5: 262144 op, 469500.00 ns, 1.7910 ns/op
+OverheadWarmup   6: 262144 op, 662900.00 ns, 2.5288 ns/op
+OverheadWarmup   7: 262144 op, 569600.00 ns, 2.1729 ns/op
+OverheadWarmup   8: 262144 op, 350500.00 ns, 1.3371 ns/op
+OverheadWarmup   9: 262144 op, 383900.00 ns, 1.4645 ns/op
+OverheadWarmup  10: 262144 op, 507400.00 ns, 1.9356 ns/op
+
+OverheadActual   1: 262144 op, 683100.00 ns, 2.6058 ns/op
+OverheadActual   2: 262144 op, 422800.00 ns, 1.6129 ns/op
+OverheadActual   3: 262144 op, 514400.00 ns, 1.9623 ns/op
+OverheadActual   4: 262144 op, 504800.00 ns, 1.9257 ns/op
+OverheadActual   5: 262144 op, 432400.00 ns, 1.6495 ns/op
+OverheadActual   6: 262144 op, 470400.00 ns, 1.7944 ns/op
+OverheadActual   7: 262144 op, 473100.00 ns, 1.8047 ns/op
+OverheadActual   8: 262144 op, 334000.00 ns, 1.2741 ns/op
+OverheadActual   9: 262144 op, 414500.00 ns, 1.5812 ns/op
+OverheadActual  10: 262144 op, 560300.00 ns, 2.1374 ns/op
+OverheadActual  11: 262144 op, 474300.00 ns, 1.8093 ns/op
+OverheadActual  12: 262144 op, 340200.00 ns, 1.2978 ns/op
+OverheadActual  13: 262144 op, 367800.00 ns, 1.4030 ns/op
+OverheadActual  14: 262144 op, 359000.00 ns, 1.3695 ns/op
+OverheadActual  15: 262144 op, 357200.00 ns, 1.3626 ns/op
+OverheadActual  16: 262144 op, 609700.00 ns, 2.3258 ns/op
+OverheadActual  17: 262144 op, 471800.00 ns, 1.7998 ns/op
+OverheadActual  18: 262144 op, 433100.00 ns, 1.6521 ns/op
+OverheadActual  19: 262144 op, 419200.00 ns, 1.5991 ns/op
+OverheadActual  20: 262144 op, 361300.00 ns, 1.3783 ns/op
+
+WorkloadWarmup   1: 262144 op, 603846600.00 ns, 2.3035 us/op
+WorkloadWarmup   2: 262144 op, 587077000.00 ns, 2.2395 us/op
+WorkloadWarmup   3: 262144 op, 611364800.00 ns, 2.3322 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 262144 op, 633356200.00 ns, 2.4161 us/op
+WorkloadActual   2: 262144 op, 604436200.00 ns, 2.3057 us/op
+WorkloadActual   3: 262144 op, 596830900.00 ns, 2.2767 us/op
+WorkloadActual   4: 262144 op, 593888400.00 ns, 2.2655 us/op
+WorkloadActual   5: 262144 op, 604372900.00 ns, 2.3055 us/op
+
+// AfterActualRun
+WorkloadResult   1: 262144 op, 604003450.00 ns, 2.3041 us/op
+WorkloadResult   2: 262144 op, 596398150.00 ns, 2.2751 us/op
+WorkloadResult   3: 262144 op, 593455650.00 ns, 2.2639 us/op
+WorkloadResult   4: 262144 op, 603940150.00 ns, 2.3038 us/op
+GC:  14 0 0 2390753280 262144
+Threading:  0 0 262144
+
+// AfterAll
+// Benchmark Process 42912 has exited with code 0.
+
+Mean = 2.287 μs, StdErr = 0.010 μs (0.45%), N = 4, StdDev = 0.020 μs
+Min = 2.264 μs, Q1 = 2.272 μs, Median = 2.289 μs, Q3 = 2.304 μs, Max = 2.304 μs
+IQR = 0.032 μs, LowerFence = 2.225 μs, UpperFence = 2.351 μs
+ConfidenceInterval = [2.155 μs; 2.419 μs] (CI 99.9%), Margin = 0.132 μs (5.78% of Mean)
+Skewness = -0.1, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 7 (46.7%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 1m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: PolygonServiceBenchmarks.'Create and parse multi-polygon from WKT': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.PolygonServiceBenchmarks.CreateMultiPolygonFromWkt --job "IterationCount=5, WarmupCount=3" --benchmarkId 8 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-NEYFPC(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 374100.00 ns, 374.1000 us/op
+WorkloadJitting  1: 1 op, 99583700.00 ns, 99.5837 ms/op
+
+WorkloadPilot    1: 2 op, 3373700.00 ns, 1.6868 ms/op
+WorkloadPilot    2: 3 op, 4148900.00 ns, 1.3830 ms/op
+WorkloadPilot    3: 4 op, 5551200.00 ns, 1.3878 ms/op
+WorkloadPilot    4: 5 op, 7083900.00 ns, 1.4168 ms/op
+WorkloadPilot    5: 6 op, 7975400.00 ns, 1.3292 ms/op
+WorkloadPilot    6: 7 op, 9733800.00 ns, 1.3905 ms/op
+WorkloadPilot    7: 8 op, 10244400.00 ns, 1.2806 ms/op
+WorkloadPilot    8: 9 op, 11627300.00 ns, 1.2919 ms/op
+WorkloadPilot    9: 10 op, 12628800.00 ns, 1.2629 ms/op
+WorkloadPilot   10: 11 op, 13747200.00 ns, 1.2497 ms/op
+WorkloadPilot   11: 12 op, 14936500.00 ns, 1.2447 ms/op
+WorkloadPilot   12: 13 op, 16274200.00 ns, 1.2519 ms/op
+WorkloadPilot   13: 14 op, 17579000.00 ns, 1.2556 ms/op
+WorkloadPilot   14: 15 op, 18149800.00 ns, 1.2100 ms/op
+WorkloadPilot   15: 16 op, 24971800.00 ns, 1.5607 ms/op
+WorkloadPilot   16: 32 op, 84278900.00 ns, 2.6337 ms/op
+WorkloadPilot   17: 64 op, 164994300.00 ns, 2.5780 ms/op
+WorkloadPilot   18: 128 op, 248382900.00 ns, 1.9405 ms/op
+WorkloadPilot   19: 256 op, 280245800.00 ns, 1.0947 ms/op
+WorkloadPilot   20: 512 op, 320256700.00 ns, 625.5014 us/op
+WorkloadPilot   21: 1024 op, 462781400.00 ns, 451.9350 us/op
+WorkloadPilot   22: 2048 op, 890778500.00 ns, 434.9504 us/op
+
+WorkloadWarmup   1: 2048 op, 842155300.00 ns, 411.2086 us/op
+WorkloadWarmup   2: 2048 op, 829055100.00 ns, 404.8121 us/op
+WorkloadWarmup   3: 2048 op, 879955900.00 ns, 429.6660 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 2048 op, 823884300.00 ns, 402.2873 us/op
+WorkloadActual   2: 2048 op, 852370400.00 ns, 416.1965 us/op
+WorkloadActual   3: 2048 op, 825666200.00 ns, 403.1573 us/op
+WorkloadActual   4: 2048 op, 821102100.00 ns, 400.9288 us/op
+WorkloadActual   5: 2048 op, 837110000.00 ns, 408.7451 us/op
+
+// AfterActualRun
+WorkloadResult   1: 2048 op, 823884300.00 ns, 402.2873 us/op
+WorkloadResult   2: 2048 op, 852370400.00 ns, 416.1965 us/op
+WorkloadResult   3: 2048 op, 825666200.00 ns, 403.1573 us/op
+WorkloadResult   4: 2048 op, 821102100.00 ns, 400.9288 us/op
+WorkloadResult   5: 2048 op, 837110000.00 ns, 408.7451 us/op
+GC:  6 0 0 1112617992 2048
+Threading:  0 0 2048
+
+// AfterAll
+// Benchmark Process 27144 has exited with code 0.
+
+Mean = 406.263 μs, StdErr = 2.817 μs (0.69%), N = 5, StdDev = 6.300 μs
+Min = 400.929 μs, Q1 = 402.287 μs, Median = 403.157 μs, Q3 = 408.745 μs, Max = 416.196 μs
+IQR = 6.458 μs, LowerFence = 392.600 μs, UpperFence = 418.432 μs
+ConfidenceInterval = [382.005 μs; 430.521 μs] (CI 99.9%), Margin = 24.258 μs (5.97% of Mean)
+Skewness = 0.6, Kurtosis = 1.39, MValue = 2
+
+// ** Remained 6 (40.0%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 0m from now) **
+Successfully reverted power plan (GUID: 381b4222-f694-41f0-9685-ff5bb260df2e FriendlyName: Balanced)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\GeoTesterApi.Benchmarks.PolygonServiceBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\GeoTesterApi.Benchmarks.PolygonServiceBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\GeoTesterApi.Benchmarks.PolygonServiceBenchmarks-report.html
+
+// * Detailed results *
+PolygonServiceBenchmarks.'Create simple rectangular polygon': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 175.212 ns, StdErr = 0.666 ns (0.38%), N = 4, StdDev = 1.333 ns
+Min = 173.564 ns, Q1 = 174.715 ns, Median = 175.233 ns, Q3 = 175.729 ns, Max = 176.818 ns
+IQR = 1.014 ns, LowerFence = 173.195 ns, UpperFence = 177.250 ns
+ConfidenceInterval = [166.598 ns; 183.826 ns] (CI 99.9%), Margin = 8.614 ns (4.92% of Mean)
+Skewness = -0.03, Kurtosis = 1.11, MValue = 2
+-------------------- Histogram --------------------
+[172.462 ns ; 177.920 ns) | @@@@
+---------------------------------------------------
+
+PolygonServiceBenchmarks.'Create multi-polygon with 2 rectangles': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 16.074 μs, StdErr = 0.125 μs (0.78%), N = 5, StdDev = 0.280 μs
+Min = 15.802 μs, Q1 = 15.920 μs, Median = 15.923 μs, Q3 = 16.245 μs, Max = 16.479 μs
+IQR = 0.325 μs, LowerFence = 15.432 μs, UpperFence = 16.732 μs
+ConfidenceInterval = [14.994 μs; 17.153 μs] (CI 99.9%), Margin = 1.079 μs (6.72% of Mean)
+Skewness = 0.4, Kurtosis = 1.12, MValue = 2
+-------------------- Histogram --------------------
+[15.647 μs ; 16.077 μs) | @@@
+[16.077 μs ; 16.577 μs) | @@
+---------------------------------------------------
+
+PolygonServiceBenchmarks.'Create donut polygon with hole': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 2.287 μs, StdErr = 0.010 μs (0.45%), N = 4, StdDev = 0.020 μs
+Min = 2.264 μs, Q1 = 2.272 μs, Median = 2.289 μs, Q3 = 2.304 μs, Max = 2.304 μs
+IQR = 0.032 μs, LowerFence = 2.225 μs, UpperFence = 2.351 μs
+ConfidenceInterval = [2.155 μs; 2.419 μs] (CI 99.9%), Margin = 0.132 μs (5.78% of Mean)
+Skewness = -0.1, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[2.247 μs ; 2.312 μs) | @@@@
+---------------------------------------------------
+
+PolygonServiceBenchmarks.'Create and parse multi-polygon from WKT': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 406.263 μs, StdErr = 2.817 μs (0.69%), N = 5, StdDev = 6.300 μs
+Min = 400.929 μs, Q1 = 402.287 μs, Median = 403.157 μs, Q3 = 408.745 μs, Max = 416.196 μs
+IQR = 6.458 μs, LowerFence = 392.600 μs, UpperFence = 418.432 μs
+ConfidenceInterval = [382.005 μs; 430.521 μs] (CI 99.9%), Margin = 24.258 μs (5.97% of Mean)
+Skewness = 0.6, Kurtosis = 1.39, MValue = 2
+-------------------- Histogram --------------------
+[400.002 μs ; 409.672 μs) | @@@@
+[409.672 μs ; 421.032 μs) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.2, OS=Windows 11 (10.0.26200.8246)
+AMD Ryzen AI 7 350 w/ Radeon 860M, 1 CPU, 16 logical and 8 physical cores
+.NET SDK=10.0.202
+  [Host]     : .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+  Job-TVZODC : .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+
+IterationCount=5  WarmupCount=3  
+
+|                                    Method |         Mean |        Error |      StdDev |          Min |          Max |       Median |   Gen0 | Allocated |
+|------------------------------------------ |-------------:|-------------:|------------:|-------------:|-------------:|-------------:|-------:|----------:|
+|       'Create simple rectangular polygon' |     175.2 ns |      8.61 ns |     1.33 ns |     173.6 ns |     176.8 ns |     175.2 ns | 0.0060 |     992 B |
+|  'Create multi-polygon with 2 rectangles' |  16,073.5 ns |  1,079.45 ns |   280.33 ns |  15,801.6 ns |  16,479.2 ns |  15,922.5 ns | 0.1831 |   31704 B |
+|          'Create donut polygon with hole' |   2,286.7 ns |    132.09 ns |    20.44 ns |   2,263.9 ns |   2,304.1 ns |   2,289.5 ns | 0.0534 |    9120 B |
+| 'Create and parse multi-polygon from WKT' | 406,263.0 ns | 24,257.60 ns | 6,299.62 ns | 400,928.8 ns | 416,196.5 ns | 403,157.3 ns | 2.9297 |  543271 B |
+
+// * Hints *
+Outliers
+  PolygonServiceBenchmarks.'Create simple rectangular polygon': IterationCount=5, WarmupCount=3 -> 1 outlier  was  removed (191.97 ns)
+  PolygonServiceBenchmarks.'Create donut polygon with hole': IterationCount=5, WarmupCount=3    -> 1 outlier  was  removed (2.42 μs)
+
+// * Legends *
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Min       : Minimum
+  Max       : Maximum
+  Median    : Value separating the higher half of all measurements (50th percentile)
+  Gen0      : GC Generation 0 collects per 1000 operations
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ns      : 1 Nanosecond (0.000000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:35 (35.08 sec), executed benchmarks: 4
+
+// Found 6 benchmarks:
+//   SrtmElevationServiceBenchmarks.'Single elevation lookup (Kyiv area)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+//   SrtmElevationServiceBenchmarks.'Grid of 9 elevation lookups (3x3)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+//   SrtmElevationServiceBenchmarks.'Dense grid of 100 elevation lookups (10x10)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+//   SrtmElevationServiceBenchmarks.'Sequential lookups along a line (100 points)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+//   SrtmElevationServiceBenchmarks.'Boundary test: corner and edge lookups': Job-TVZODC(IterationCount=5, WarmupCount=3)
+//   SrtmElevationServiceBenchmarks.'Same tile cache hit (multiple lookups, same tile)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: SrtmElevationServiceBenchmarks.'Single elevation lookup (Kyiv area)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.SrtmElevationServiceBenchmarks.GetElevation_Single --job "IterationCount=5, WarmupCount=3" --benchmarkId 9 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-OHQFNE(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 445200.00 ns, 445.2000 us/op
+WorkloadJitting  1: 1 op, 1286000.00 ns, 1.2860 ms/op
+
+OverheadJitting  2: 16 op, 352400.00 ns, 22.0250 us/op
+WorkloadJitting  2: 16 op, 298700.00 ns, 18.6687 us/op
+
+WorkloadPilot    1: 16 op, 9200.00 ns, 575.0000 ns/op
+WorkloadPilot    2: 32 op, 76100.00 ns, 2.3781 us/op
+WorkloadPilot    3: 64 op, 42200.00 ns, 659.3750 ns/op
+WorkloadPilot    4: 128 op, 52500.00 ns, 410.1562 ns/op
+WorkloadPilot    5: 256 op, 77600.00 ns, 303.1250 ns/op
+WorkloadPilot    6: 512 op, 195400.00 ns, 381.6406 ns/op
+WorkloadPilot    7: 1024 op, 267600.00 ns, 261.3281 ns/op
+WorkloadPilot    8: 2048 op, 392400.00 ns, 191.6016 ns/op
+WorkloadPilot    9: 4096 op, 1304000.00 ns, 318.3594 ns/op
+WorkloadPilot   10: 8192 op, 1198400.00 ns, 146.2891 ns/op
+WorkloadPilot   11: 16384 op, 1693600.00 ns, 103.3691 ns/op
+WorkloadPilot   12: 32768 op, 3175800.00 ns, 96.9177 ns/op
+WorkloadPilot   13: 65536 op, 8068200.00 ns, 123.1110 ns/op
+WorkloadPilot   14: 131072 op, 13993700.00 ns, 106.7635 ns/op
+WorkloadPilot   15: 262144 op, 27315800.00 ns, 104.2015 ns/op
+WorkloadPilot   16: 524288 op, 68537900.00 ns, 130.7257 ns/op
+WorkloadPilot   17: 1048576 op, 164513900.00 ns, 156.8927 ns/op
+WorkloadPilot   18: 2097152 op, 164281400.00 ns, 78.3355 ns/op
+WorkloadPilot   19: 4194304 op, 244916600.00 ns, 58.3927 ns/op
+WorkloadPilot   20: 8388608 op, 513271900.00 ns, 61.1868 ns/op
+
+OverheadWarmup   1: 8388608 op, 11854800.00 ns, 1.4132 ns/op
+OverheadWarmup   2: 8388608 op, 12345000.00 ns, 1.4716 ns/op
+OverheadWarmup   3: 8388608 op, 12824200.00 ns, 1.5288 ns/op
+OverheadWarmup   4: 8388608 op, 13301600.00 ns, 1.5857 ns/op
+OverheadWarmup   5: 8388608 op, 12812600.00 ns, 1.5274 ns/op
+OverheadWarmup   6: 8388608 op, 12182300.00 ns, 1.4522 ns/op
+OverheadWarmup   7: 8388608 op, 12060000.00 ns, 1.4377 ns/op
+OverheadWarmup   8: 8388608 op, 12378800.00 ns, 1.4757 ns/op
+OverheadWarmup   9: 8388608 op, 12166100.00 ns, 1.4503 ns/op
+
+OverheadActual   1: 8388608 op, 13198200.00 ns, 1.5733 ns/op
+OverheadActual   2: 8388608 op, 11971700.00 ns, 1.4271 ns/op
+OverheadActual   3: 8388608 op, 11846900.00 ns, 1.4123 ns/op
+OverheadActual   4: 8388608 op, 14524700.00 ns, 1.7315 ns/op
+OverheadActual   5: 8388608 op, 14627500.00 ns, 1.7437 ns/op
+OverheadActual   6: 8388608 op, 17948500.00 ns, 2.1396 ns/op
+OverheadActual   7: 8388608 op, 19010500.00 ns, 2.2662 ns/op
+OverheadActual   8: 8388608 op, 16896500.00 ns, 2.0142 ns/op
+OverheadActual   9: 8388608 op, 13922100.00 ns, 1.6596 ns/op
+OverheadActual  10: 8388608 op, 14315900.00 ns, 1.7066 ns/op
+OverheadActual  11: 8388608 op, 14030000.00 ns, 1.6725 ns/op
+OverheadActual  12: 8388608 op, 13562500.00 ns, 1.6168 ns/op
+OverheadActual  13: 8388608 op, 14196100.00 ns, 1.6923 ns/op
+OverheadActual  14: 8388608 op, 10345700.00 ns, 1.2333 ns/op
+OverheadActual  15: 8388608 op, 10694100.00 ns, 1.2748 ns/op
+OverheadActual  16: 8388608 op, 11119100.00 ns, 1.3255 ns/op
+OverheadActual  17: 8388608 op, 11929300.00 ns, 1.4221 ns/op
+OverheadActual  18: 8388608 op, 9536900.00 ns, 1.1369 ns/op
+OverheadActual  19: 8388608 op, 9904500.00 ns, 1.1807 ns/op
+OverheadActual  20: 8388608 op, 9313500.00 ns, 1.1103 ns/op
+
+WorkloadWarmup   1: 8388608 op, 496788700.00 ns, 59.2218 ns/op
+WorkloadWarmup   2: 8388608 op, 482950000.00 ns, 57.5721 ns/op
+WorkloadWarmup   3: 8388608 op, 478882000.00 ns, 57.0872 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 8388608 op, 492688100.00 ns, 58.7330 ns/op
+WorkloadActual   2: 8388608 op, 476062400.00 ns, 56.7511 ns/op
+WorkloadActual   3: 8388608 op, 493527700.00 ns, 58.8331 ns/op
+WorkloadActual   4: 8388608 op, 483209800.00 ns, 57.6031 ns/op
+WorkloadActual   5: 8388608 op, 499202300.00 ns, 59.5096 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 8388608 op, 479307750.00 ns, 57.1379 ns/op
+WorkloadResult   2: 8388608 op, 462682050.00 ns, 55.1560 ns/op
+WorkloadResult   3: 8388608 op, 480147350.00 ns, 57.2380 ns/op
+WorkloadResult   4: 8388608 op, 469829450.00 ns, 56.0080 ns/op
+WorkloadResult   5: 8388608 op, 485821950.00 ns, 57.9145 ns/op
+GC:  5 0 0 939524632 8388608
+Threading:  0 0 8388608
+
+// AfterAll
+// Benchmark Process 4312 has exited with code 0.
+
+Mean = 56.691 ns, StdErr = 0.491 ns (0.87%), N = 5, StdDev = 1.098 ns
+Min = 55.156 ns, Q1 = 56.008 ns, Median = 57.138 ns, Q3 = 57.238 ns, Max = 57.914 ns
+IQR = 1.230 ns, LowerFence = 54.163 ns, UpperFence = 59.083 ns
+ConfidenceInterval = [52.465 ns; 60.917 ns] (CI 99.9%), Margin = 4.226 ns (7.46% of Mean)
+Skewness = -0.28, Kurtosis = 1.12, MValue = 2
+
+// ** Remained 5 (33.3%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: SrtmElevationServiceBenchmarks.'Grid of 9 elevation lookups (3x3)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.SrtmElevationServiceBenchmarks.GetElevation_Grid3x3 --job "IterationCount=5, WarmupCount=3" --benchmarkId 10 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-WBMPQY(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 289600.00 ns, 289.6000 us/op
+WorkloadJitting  1: 1 op, 1597300.00 ns, 1.5973 ms/op
+
+OverheadJitting  2: 16 op, 601900.00 ns, 37.6187 us/op
+WorkloadJitting  2: 16 op, 790000.00 ns, 49.3750 us/op
+
+WorkloadPilot    1: 16 op, 63700.00 ns, 3.9813 us/op
+WorkloadPilot    2: 32 op, 77500.00 ns, 2.4219 us/op
+WorkloadPilot    3: 64 op, 133100.00 ns, 2.0797 us/op
+WorkloadPilot    4: 128 op, 257300.00 ns, 2.0102 us/op
+WorkloadPilot    5: 256 op, 372600.00 ns, 1.4555 us/op
+WorkloadPilot    6: 512 op, 855400.00 ns, 1.6707 us/op
+WorkloadPilot    7: 1024 op, 1314300.00 ns, 1.2835 us/op
+WorkloadPilot    8: 2048 op, 1670000.00 ns, 815.4297 ns/op
+WorkloadPilot    9: 4096 op, 3137500.00 ns, 765.9912 ns/op
+WorkloadPilot   10: 8192 op, 6111000.00 ns, 745.9717 ns/op
+WorkloadPilot   11: 16384 op, 12971400.00 ns, 791.7114 ns/op
+WorkloadPilot   12: 32768 op, 24334100.00 ns, 742.6178 ns/op
+WorkloadPilot   13: 65536 op, 46664700.00 ns, 712.0468 ns/op
+WorkloadPilot   14: 131072 op, 98228200.00 ns, 749.4217 ns/op
+WorkloadPilot   15: 262144 op, 226576800.00 ns, 864.3219 ns/op
+WorkloadPilot   16: 524288 op, 187462800.00 ns, 357.5569 ns/op
+WorkloadPilot   17: 1048576 op, 364218700.00 ns, 347.3460 ns/op
+WorkloadPilot   18: 2097152 op, 773072100.00 ns, 368.6295 ns/op
+
+OverheadWarmup   1: 2097152 op, 2700800.00 ns, 1.2878 ns/op
+OverheadWarmup   2: 2097152 op, 2739000.00 ns, 1.3061 ns/op
+OverheadWarmup   3: 2097152 op, 2850300.00 ns, 1.3591 ns/op
+OverheadWarmup   4: 2097152 op, 3117900.00 ns, 1.4867 ns/op
+OverheadWarmup   5: 2097152 op, 2807500.00 ns, 1.3387 ns/op
+OverheadWarmup   6: 2097152 op, 2981900.00 ns, 1.4219 ns/op
+OverheadWarmup   7: 2097152 op, 2778700.00 ns, 1.3250 ns/op
+
+OverheadActual   1: 2097152 op, 2838300.00 ns, 1.3534 ns/op
+OverheadActual   2: 2097152 op, 2905900.00 ns, 1.3856 ns/op
+OverheadActual   3: 2097152 op, 2829700.00 ns, 1.3493 ns/op
+OverheadActual   4: 2097152 op, 2920200.00 ns, 1.3925 ns/op
+OverheadActual   5: 2097152 op, 2880700.00 ns, 1.3736 ns/op
+OverheadActual   6: 2097152 op, 2856000.00 ns, 1.3618 ns/op
+OverheadActual   7: 2097152 op, 2846900.00 ns, 1.3575 ns/op
+OverheadActual   8: 2097152 op, 2920500.00 ns, 1.3926 ns/op
+OverheadActual   9: 2097152 op, 3033900.00 ns, 1.4467 ns/op
+OverheadActual  10: 2097152 op, 2988500.00 ns, 1.4250 ns/op
+OverheadActual  11: 2097152 op, 2835200.00 ns, 1.3519 ns/op
+OverheadActual  12: 2097152 op, 2758700.00 ns, 1.3155 ns/op
+OverheadActual  13: 2097152 op, 2991200.00 ns, 1.4263 ns/op
+OverheadActual  14: 2097152 op, 2902600.00 ns, 1.3841 ns/op
+OverheadActual  15: 2097152 op, 2712600.00 ns, 1.2935 ns/op
+
+WorkloadWarmup   1: 2097152 op, 766153400.00 ns, 365.3304 ns/op
+WorkloadWarmup   2: 2097152 op, 712139800.00 ns, 339.5747 ns/op
+WorkloadWarmup   3: 2097152 op, 741695900.00 ns, 353.6682 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 2097152 op, 780064800.00 ns, 371.9639 ns/op
+WorkloadActual   2: 2097152 op, 731499700.00 ns, 348.8062 ns/op
+WorkloadActual   3: 2097152 op, 742507900.00 ns, 354.0554 ns/op
+WorkloadActual   4: 2097152 op, 729565100.00 ns, 347.8837 ns/op
+WorkloadActual   5: 2097152 op, 712237400.00 ns, 339.6213 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 2097152 op, 728619000.00 ns, 347.4326 ns/op
+WorkloadResult   2: 2097152 op, 739627200.00 ns, 352.6817 ns/op
+WorkloadResult   3: 2097152 op, 726684400.00 ns, 346.5101 ns/op
+WorkloadResult   4: 2097152 op, 709356700.00 ns, 338.2476 ns/op
+GC:  8 0 0 1409287016 2097152
+Threading:  0 0 2097152
+
+// AfterAll
+// Benchmark Process 56580 has exited with code 0.
+
+Mean = 346.218 ns, StdErr = 2.984 ns (0.86%), N = 4, StdDev = 5.968 ns
+Min = 338.248 ns, Q1 = 344.445 ns, Median = 346.971 ns, Q3 = 348.745 ns, Max = 352.682 ns
+IQR = 4.300 ns, LowerFence = 337.994 ns, UpperFence = 355.195 ns
+ConfidenceInterval = [307.650 ns; 384.786 ns] (CI 99.9%), Margin = 38.568 ns (11.14% of Mean)
+Skewness = -0.28, Kurtosis = 1.14, MValue = 2
+
+// ** Remained 4 (26.7%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: SrtmElevationServiceBenchmarks.'Dense grid of 100 elevation lookups (10x10)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.SrtmElevationServiceBenchmarks.GetElevation_Grid10x10 --job "IterationCount=5, WarmupCount=3" --benchmarkId 11 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-UKBJGK(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 469100.00 ns, 469.1000 us/op
+WorkloadJitting  1: 1 op, 1327000.00 ns, 1.3270 ms/op
+
+OverheadJitting  2: 16 op, 326700.00 ns, 20.4187 us/op
+WorkloadJitting  2: 16 op, 525500.00 ns, 32.8438 us/op
+
+WorkloadPilot    1: 16 op, 349500.00 ns, 21.8438 us/op
+WorkloadPilot    2: 32 op, 635400.00 ns, 19.8562 us/op
+WorkloadPilot    3: 64 op, 1022600.00 ns, 15.9781 us/op
+WorkloadPilot    4: 128 op, 1722300.00 ns, 13.4555 us/op
+WorkloadPilot    5: 256 op, 3523200.00 ns, 13.7625 us/op
+WorkloadPilot    6: 512 op, 7294900.00 ns, 14.2479 us/op
+WorkloadPilot    7: 1024 op, 14365100.00 ns, 14.0284 us/op
+WorkloadPilot    8: 2048 op, 27244300.00 ns, 13.3029 us/op
+WorkloadPilot    9: 4096 op, 55887200.00 ns, 13.6443 us/op
+WorkloadPilot   10: 8192 op, 143017000.00 ns, 17.4581 us/op
+WorkloadPilot   11: 16384 op, 167722400.00 ns, 10.2370 us/op
+WorkloadPilot   12: 32768 op, 221788800.00 ns, 6.7685 us/op
+WorkloadPilot   13: 65536 op, 422609700.00 ns, 6.4485 us/op
+WorkloadPilot   14: 131072 op, 996915600.00 ns, 7.6059 us/op
+
+OverheadWarmup   1: 131072 op, 177500.00 ns, 1.3542 ns/op
+OverheadWarmup   2: 131072 op, 188500.00 ns, 1.4381 ns/op
+OverheadWarmup   3: 131072 op, 193400.00 ns, 1.4755 ns/op
+OverheadWarmup   4: 131072 op, 184400.00 ns, 1.4069 ns/op
+OverheadWarmup   5: 131072 op, 243700.00 ns, 1.8593 ns/op
+OverheadWarmup   6: 131072 op, 185400.00 ns, 1.4145 ns/op
+
+OverheadActual   1: 131072 op, 227600.00 ns, 1.7365 ns/op
+OverheadActual   2: 131072 op, 172700.00 ns, 1.3176 ns/op
+OverheadActual   3: 131072 op, 189800.00 ns, 1.4481 ns/op
+OverheadActual   4: 131072 op, 211000.00 ns, 1.6098 ns/op
+OverheadActual   5: 131072 op, 378500.00 ns, 2.8877 ns/op
+OverheadActual   6: 131072 op, 471700.00 ns, 3.5988 ns/op
+OverheadActual   7: 131072 op, 231900.00 ns, 1.7693 ns/op
+OverheadActual   8: 131072 op, 206700.00 ns, 1.5770 ns/op
+OverheadActual   9: 131072 op, 173000.00 ns, 1.3199 ns/op
+OverheadActual  10: 131072 op, 302900.00 ns, 2.3109 ns/op
+OverheadActual  11: 131072 op, 352500.00 ns, 2.6894 ns/op
+OverheadActual  12: 131072 op, 222600.00 ns, 1.6983 ns/op
+OverheadActual  13: 131072 op, 380900.00 ns, 2.9060 ns/op
+OverheadActual  14: 131072 op, 199600.00 ns, 1.5228 ns/op
+OverheadActual  15: 131072 op, 210500.00 ns, 1.6060 ns/op
+OverheadActual  16: 131072 op, 195000.00 ns, 1.4877 ns/op
+OverheadActual  17: 131072 op, 198000.00 ns, 1.5106 ns/op
+OverheadActual  18: 131072 op, 247900.00 ns, 1.8913 ns/op
+OverheadActual  19: 131072 op, 272700.00 ns, 2.0805 ns/op
+OverheadActual  20: 131072 op, 245600.00 ns, 1.8738 ns/op
+
+WorkloadWarmup   1: 131072 op, 956993100.00 ns, 7.3013 us/op
+WorkloadWarmup   2: 131072 op, 846634200.00 ns, 6.4593 us/op
+WorkloadWarmup   3: 131072 op, 814153300.00 ns, 6.2115 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 131072 op, 882464500.00 ns, 6.7327 us/op
+WorkloadActual   2: 131072 op, 822410800.00 ns, 6.2745 us/op
+WorkloadActual   3: 131072 op, 847647400.00 ns, 6.4670 us/op
+WorkloadActual   4: 131072 op, 834846500.00 ns, 6.3694 us/op
+WorkloadActual   5: 131072 op, 845235800.00 ns, 6.4486 us/op
+
+// AfterActualRun
+WorkloadResult   1: 131072 op, 822185700.00 ns, 6.2728 us/op
+WorkloadResult   2: 131072 op, 847422300.00 ns, 6.4653 us/op
+WorkloadResult   3: 131072 op, 834621400.00 ns, 6.3677 us/op
+WorkloadResult   4: 131072 op, 845010700.00 ns, 6.4469 us/op
+GC:  10 0 0 1614807912 131072
+Threading:  0 0 131072
+
+// AfterAll
+// Benchmark Process 14372 has exited with code 0.
+
+Mean = 6.388 μs, StdErr = 0.044 μs (0.69%), N = 4, StdDev = 0.088 μs
+Min = 6.273 μs, Q1 = 6.344 μs, Median = 6.407 μs, Q3 = 6.452 μs, Max = 6.465 μs
+IQR = 0.108 μs, LowerFence = 6.183 μs, UpperFence = 6.613 μs
+ConfidenceInterval = [5.821 μs; 6.956 μs] (CI 99.9%), Margin = 0.568 μs (8.88% of Mean)
+Skewness = -0.33, Kurtosis = 0.94, MValue = 2
+
+// ** Remained 3 (20.0%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: SrtmElevationServiceBenchmarks.'Sequential lookups along a line (100 points)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.SrtmElevationServiceBenchmarks.GetElevation_Line100 --job "IterationCount=5, WarmupCount=3" --benchmarkId 12 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-IIVPPC(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 445600.00 ns, 445.6000 us/op
+WorkloadJitting  1: 1 op, 1243800.00 ns, 1.2438 ms/op
+
+OverheadJitting  2: 16 op, 392900.00 ns, 24.5562 us/op
+WorkloadJitting  2: 16 op, 711500.00 ns, 44.4688 us/op
+
+WorkloadPilot    1: 16 op, 203000.00 ns, 12.6875 us/op
+WorkloadPilot    2: 32 op, 500600.00 ns, 15.6438 us/op
+WorkloadPilot    3: 64 op, 863000.00 ns, 13.4844 us/op
+WorkloadPilot    4: 128 op, 1383800.00 ns, 10.8109 us/op
+WorkloadPilot    5: 256 op, 2699600.00 ns, 10.5453 us/op
+WorkloadPilot    6: 512 op, 5398500.00 ns, 10.5439 us/op
+WorkloadPilot    7: 1024 op, 10864800.00 ns, 10.6102 us/op
+WorkloadPilot    8: 2048 op, 22182800.00 ns, 10.8314 us/op
+WorkloadPilot    9: 4096 op, 44690300.00 ns, 10.9107 us/op
+WorkloadPilot   10: 8192 op, 119750400.00 ns, 14.6180 us/op
+WorkloadPilot   11: 16384 op, 186430800.00 ns, 11.3788 us/op
+WorkloadPilot   12: 32768 op, 201968300.00 ns, 6.1636 us/op
+WorkloadPilot   13: 65536 op, 387085300.00 ns, 5.9065 us/op
+WorkloadPilot   14: 131072 op, 735747500.00 ns, 5.6133 us/op
+
+OverheadWarmup   1: 131072 op, 175000.00 ns, 1.3351 ns/op
+OverheadWarmup   2: 131072 op, 171800.00 ns, 1.3107 ns/op
+OverheadWarmup   3: 131072 op, 180300.00 ns, 1.3756 ns/op
+OverheadWarmup   4: 131072 op, 234600.00 ns, 1.7899 ns/op
+OverheadWarmup   5: 131072 op, 191100.00 ns, 1.4580 ns/op
+OverheadWarmup   6: 131072 op, 325900.00 ns, 2.4864 ns/op
+OverheadWarmup   7: 131072 op, 272300.00 ns, 2.0775 ns/op
+
+OverheadActual   1: 131072 op, 202000.00 ns, 1.5411 ns/op
+OverheadActual   2: 131072 op, 221300.00 ns, 1.6884 ns/op
+OverheadActual   3: 131072 op, 383400.00 ns, 2.9251 ns/op
+OverheadActual   4: 131072 op, 223300.00 ns, 1.7036 ns/op
+OverheadActual   5: 131072 op, 211500.00 ns, 1.6136 ns/op
+OverheadActual   6: 131072 op, 220600.00 ns, 1.6830 ns/op
+OverheadActual   7: 131072 op, 219100.00 ns, 1.6716 ns/op
+OverheadActual   8: 131072 op, 370600.00 ns, 2.8275 ns/op
+OverheadActual   9: 131072 op, 258400.00 ns, 1.9714 ns/op
+OverheadActual  10: 131072 op, 229400.00 ns, 1.7502 ns/op
+OverheadActual  11: 131072 op, 328700.00 ns, 2.5078 ns/op
+OverheadActual  12: 131072 op, 271100.00 ns, 2.0683 ns/op
+OverheadActual  13: 131072 op, 254200.00 ns, 1.9394 ns/op
+OverheadActual  14: 131072 op, 226600.00 ns, 1.7288 ns/op
+OverheadActual  15: 131072 op, 202400.00 ns, 1.5442 ns/op
+OverheadActual  16: 131072 op, 224100.00 ns, 1.7097 ns/op
+OverheadActual  17: 131072 op, 294700.00 ns, 2.2484 ns/op
+OverheadActual  18: 131072 op, 234700.00 ns, 1.7906 ns/op
+OverheadActual  19: 131072 op, 180700.00 ns, 1.3786 ns/op
+OverheadActual  20: 131072 op, 244600.00 ns, 1.8661 ns/op
+
+WorkloadWarmup   1: 131072 op, 853885300.00 ns, 6.5146 us/op
+WorkloadWarmup   2: 131072 op, 821010200.00 ns, 6.2638 us/op
+WorkloadWarmup   3: 131072 op, 769238700.00 ns, 5.8688 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 131072 op, 855838400.00 ns, 6.5295 us/op
+WorkloadActual   2: 131072 op, 778025300.00 ns, 5.9359 us/op
+WorkloadActual   3: 131072 op, 798722800.00 ns, 6.0938 us/op
+WorkloadActual   4: 131072 op, 758047600.00 ns, 5.7834 us/op
+WorkloadActual   5: 131072 op, 735508700.00 ns, 5.6115 us/op
+
+// AfterActualRun
+WorkloadResult   1: 131072 op, 855610400.00 ns, 6.5278 us/op
+WorkloadResult   2: 131072 op, 777797300.00 ns, 5.9341 us/op
+WorkloadResult   3: 131072 op, 798494800.00 ns, 6.0920 us/op
+WorkloadResult   4: 131072 op, 757819600.00 ns, 5.7817 us/op
+WorkloadResult   5: 131072 op, 735280700.00 ns, 5.6097 us/op
+GC:  9 0 0 1468006936 131072
+Threading:  0 0 131072
+
+// AfterAll
+// Benchmark Process 15044 has exited with code 0.
+
+Mean = 5.989 μs, StdErr = 0.157 μs (2.62%), N = 5, StdDev = 0.350 μs
+Min = 5.610 μs, Q1 = 5.782 μs, Median = 5.934 μs, Q3 = 6.092 μs, Max = 6.528 μs
+IQR = 0.310 μs, LowerFence = 5.316 μs, UpperFence = 6.558 μs
+ConfidenceInterval = [4.640 μs; 7.338 μs] (CI 99.9%), Margin = 1.349 μs (22.52% of Mean)
+Skewness = 0.44, Kurtosis = 1.42, MValue = 2
+
+// ** Remained 2 (13.3%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: SrtmElevationServiceBenchmarks.'Boundary test: corner and edge lookups': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.SrtmElevationServiceBenchmarks.GetElevation_Boundary --job "IterationCount=5, WarmupCount=3" --benchmarkId 13 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-BQVERE(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 283900.00 ns, 283.9000 us/op
+WorkloadJitting  1: 1 op, 1260600.00 ns, 1.2606 ms/op
+
+OverheadJitting  2: 16 op, 423400.00 ns, 26.4625 us/op
+WorkloadJitting  2: 16 op, 460600.00 ns, 28.7875 us/op
+
+WorkloadPilot    1: 16 op, 78800.00 ns, 4.9250 us/op
+WorkloadPilot    2: 32 op, 53900.00 ns, 1.6844 us/op
+WorkloadPilot    3: 64 op, 50400.00 ns, 787.5000 ns/op
+WorkloadPilot    4: 128 op, 200900.00 ns, 1.5695 us/op
+WorkloadPilot    5: 256 op, 415300.00 ns, 1.6223 us/op
+WorkloadPilot    6: 512 op, 306500.00 ns, 598.6328 ns/op
+WorkloadPilot    7: 1024 op, 1181000.00 ns, 1.1533 us/op
+WorkloadPilot    8: 2048 op, 1318100.00 ns, 643.6035 ns/op
+WorkloadPilot    9: 4096 op, 2228400.00 ns, 544.0430 ns/op
+WorkloadPilot   10: 8192 op, 4770100.00 ns, 582.2876 ns/op
+WorkloadPilot   11: 16384 op, 8391800.00 ns, 512.1948 ns/op
+WorkloadPilot   12: 32768 op, 18487800.00 ns, 564.2029 ns/op
+WorkloadPilot   13: 65536 op, 35668900.00 ns, 544.2642 ns/op
+WorkloadPilot   14: 131072 op, 86807800.00 ns, 662.2910 ns/op
+WorkloadPilot   15: 262144 op, 208009200.00 ns, 793.4921 ns/op
+WorkloadPilot   16: 524288 op, 167156400.00 ns, 318.8255 ns/op
+WorkloadPilot   17: 1048576 op, 348269900.00 ns, 332.1361 ns/op
+WorkloadPilot   18: 2097152 op, 607682800.00 ns, 289.7657 ns/op
+
+OverheadWarmup   1: 2097152 op, 3336600.00 ns, 1.5910 ns/op
+OverheadWarmup   2: 2097152 op, 3071700.00 ns, 1.4647 ns/op
+OverheadWarmup   3: 2097152 op, 3360300.00 ns, 1.6023 ns/op
+OverheadWarmup   4: 2097152 op, 6030200.00 ns, 2.8754 ns/op
+OverheadWarmup   5: 2097152 op, 4980100.00 ns, 2.3747 ns/op
+OverheadWarmup   6: 2097152 op, 5014100.00 ns, 2.3909 ns/op
+OverheadWarmup   7: 2097152 op, 4122200.00 ns, 1.9656 ns/op
+
+OverheadActual   1: 2097152 op, 6014500.00 ns, 2.8679 ns/op
+OverheadActual   2: 2097152 op, 3668300.00 ns, 1.7492 ns/op
+OverheadActual   3: 2097152 op, 3481000.00 ns, 1.6599 ns/op
+OverheadActual   4: 2097152 op, 3484100.00 ns, 1.6613 ns/op
+OverheadActual   5: 2097152 op, 3077200.00 ns, 1.4673 ns/op
+OverheadActual   6: 2097152 op, 3478300.00 ns, 1.6586 ns/op
+OverheadActual   7: 2097152 op, 3680800.00 ns, 1.7551 ns/op
+OverheadActual   8: 2097152 op, 4258000.00 ns, 2.0304 ns/op
+OverheadActual   9: 2097152 op, 5179300.00 ns, 2.4697 ns/op
+OverheadActual  10: 2097152 op, 2829600.00 ns, 1.3493 ns/op
+OverheadActual  11: 2097152 op, 5082600.00 ns, 2.4236 ns/op
+OverheadActual  12: 2097152 op, 3156900.00 ns, 1.5053 ns/op
+OverheadActual  13: 2097152 op, 3809700.00 ns, 1.8166 ns/op
+OverheadActual  14: 2097152 op, 3318900.00 ns, 1.5826 ns/op
+OverheadActual  15: 2097152 op, 3244200.00 ns, 1.5470 ns/op
+OverheadActual  16: 2097152 op, 4022200.00 ns, 1.9179 ns/op
+OverheadActual  17: 2097152 op, 4852400.00 ns, 2.3138 ns/op
+OverheadActual  18: 2097152 op, 4207500.00 ns, 2.0063 ns/op
+OverheadActual  19: 2097152 op, 3522000.00 ns, 1.6794 ns/op
+OverheadActual  20: 2097152 op, 3920900.00 ns, 1.8696 ns/op
+
+WorkloadWarmup   1: 2097152 op, 626743200.00 ns, 298.8544 ns/op
+WorkloadWarmup   2: 2097152 op, 600358000.00 ns, 286.2730 ns/op
+WorkloadWarmup   3: 2097152 op, 595967400.00 ns, 284.1794 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 2097152 op, 617515400.00 ns, 294.4543 ns/op
+WorkloadActual   2: 2097152 op, 633533300.00 ns, 302.0922 ns/op
+WorkloadActual   3: 2097152 op, 705274000.00 ns, 336.3008 ns/op
+WorkloadActual   4: 2097152 op, 632583900.00 ns, 301.6395 ns/op
+WorkloadActual   5: 2097152 op, 601426200.00 ns, 286.7824 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 2097152 op, 613840850.00 ns, 292.7021 ns/op
+WorkloadResult   2: 2097152 op, 629858750.00 ns, 300.3401 ns/op
+WorkloadResult   3: 2097152 op, 628909350.00 ns, 299.8873 ns/op
+WorkloadResult   4: 2097152 op, 597751650.00 ns, 285.0302 ns/op
+GC:  7 0 0 1174405992 2097152
+Threading:  0 0 2097152
+
+// AfterAll
+// Benchmark Process 5712 has exited with code 0.
+
+Mean = 294.490 ns, StdErr = 3.606 ns (1.22%), N = 4, StdDev = 7.212 ns
+Min = 285.030 ns, Q1 = 290.784 ns, Median = 296.295 ns, Q3 = 300.001 ns, Max = 300.340 ns
+IQR = 9.216 ns, LowerFence = 276.960 ns, UpperFence = 313.825 ns
+ConfidenceInterval = [247.886 ns; 341.094 ns] (CI 99.9%), Margin = 46.604 ns (15.83% of Mean)
+Skewness = -0.33, Kurtosis = 0.93, MValue = 2
+
+// ** Remained 1 (6.7%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: SrtmElevationServiceBenchmarks.'Same tile cache hit (multiple lookups, same tile)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet f9c8f24f-8178-4401-92e1-44191287300b.dll --benchmarkName GeoTesterApi.Benchmarks.SrtmElevationServiceBenchmarks.GetElevation_CacheHits --job "IterationCount=5, WarmupCount=3" --benchmarkId 14 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\f9c8f24f-8178-4401-92e1-44191287300b\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-TGVGQU(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 278600.00 ns, 278.6000 us/op
+WorkloadJitting  1: 1 op, 1495100.00 ns, 1.4951 ms/op
+
+OverheadJitting  2: 16 op, 611500.00 ns, 38.2188 us/op
+WorkloadJitting  2: 16 op, 652200.00 ns, 40.7625 us/op
+
+WorkloadPilot    1: 16 op, 119500.00 ns, 7.4688 us/op
+WorkloadPilot    2: 32 op, 301100.00 ns, 9.4094 us/op
+WorkloadPilot    3: 64 op, 1096000.00 ns, 17.1250 us/op
+WorkloadPilot    4: 128 op, 848500.00 ns, 6.6289 us/op
+WorkloadPilot    5: 256 op, 1692000.00 ns, 6.6094 us/op
+WorkloadPilot    6: 512 op, 3202000.00 ns, 6.2539 us/op
+WorkloadPilot    7: 1024 op, 6032200.00 ns, 5.8908 us/op
+WorkloadPilot    8: 2048 op, 12254200.00 ns, 5.9835 us/op
+WorkloadPilot    9: 4096 op, 24433200.00 ns, 5.9651 us/op
+WorkloadPilot   10: 8192 op, 48903400.00 ns, 5.9697 us/op
+WorkloadPilot   11: 16384 op, 127095900.00 ns, 7.7573 us/op
+WorkloadPilot   12: 32768 op, 178344700.00 ns, 5.4426 us/op
+WorkloadPilot   13: 65536 op, 217163600.00 ns, 3.3137 us/op
+WorkloadPilot   14: 131072 op, 383138200.00 ns, 2.9231 us/op
+WorkloadPilot   15: 262144 op, 769093100.00 ns, 2.9339 us/op
+
+OverheadWarmup   1: 262144 op, 511500.00 ns, 1.9512 ns/op
+OverheadWarmup   2: 262144 op, 487100.00 ns, 1.8581 ns/op
+OverheadWarmup   3: 262144 op, 348000.00 ns, 1.3275 ns/op
+OverheadWarmup   4: 262144 op, 678200.00 ns, 2.5871 ns/op
+OverheadWarmup   5: 262144 op, 482300.00 ns, 1.8398 ns/op
+OverheadWarmup   6: 262144 op, 605400.00 ns, 2.3094 ns/op
+OverheadWarmup   7: 262144 op, 482300.00 ns, 1.8398 ns/op
+
+OverheadActual   1: 262144 op, 341800.00 ns, 1.3039 ns/op
+OverheadActual   2: 262144 op, 361500.00 ns, 1.3790 ns/op
+OverheadActual   3: 262144 op, 389300.00 ns, 1.4851 ns/op
+OverheadActual   4: 262144 op, 377300.00 ns, 1.4393 ns/op
+OverheadActual   5: 262144 op, 515500.00 ns, 1.9665 ns/op
+OverheadActual   6: 262144 op, 485700.00 ns, 1.8528 ns/op
+OverheadActual   7: 262144 op, 503900.00 ns, 1.9222 ns/op
+OverheadActual   8: 262144 op, 334600.00 ns, 1.2764 ns/op
+OverheadActual   9: 262144 op, 372100.00 ns, 1.4194 ns/op
+OverheadActual  10: 262144 op, 517400.00 ns, 1.9737 ns/op
+OverheadActual  11: 262144 op, 677000.00 ns, 2.5826 ns/op
+OverheadActual  12: 262144 op, 604800.00 ns, 2.3071 ns/op
+OverheadActual  13: 262144 op, 594300.00 ns, 2.2671 ns/op
+OverheadActual  14: 262144 op, 572800.00 ns, 2.1851 ns/op
+OverheadActual  15: 262144 op, 387000.00 ns, 1.4763 ns/op
+OverheadActual  16: 262144 op, 516600.00 ns, 1.9707 ns/op
+OverheadActual  17: 262144 op, 576400.00 ns, 2.1988 ns/op
+OverheadActual  18: 262144 op, 333200.00 ns, 1.2711 ns/op
+OverheadActual  19: 262144 op, 490300.00 ns, 1.8703 ns/op
+OverheadActual  20: 262144 op, 702000.00 ns, 2.6779 ns/op
+
+WorkloadWarmup   1: 262144 op, 806833200.00 ns, 3.0778 us/op
+WorkloadWarmup   2: 262144 op, 851221500.00 ns, 3.2472 us/op
+WorkloadWarmup   3: 262144 op, 879307900.00 ns, 3.3543 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 262144 op, 764519500.00 ns, 2.9164 us/op
+WorkloadActual   2: 262144 op, 818768200.00 ns, 3.1234 us/op
+WorkloadActual   3: 262144 op, 816000700.00 ns, 3.1128 us/op
+WorkloadActual   4: 262144 op, 803249200.00 ns, 3.0642 us/op
+WorkloadActual   5: 262144 op, 739797600.00 ns, 2.8221 us/op
+
+// AfterActualRun
+WorkloadResult   1: 262144 op, 764022400.00 ns, 2.9145 us/op
+WorkloadResult   2: 262144 op, 818271100.00 ns, 3.1215 us/op
+WorkloadResult   3: 262144 op, 815503600.00 ns, 3.1109 us/op
+WorkloadResult   4: 262144 op, 802752100.00 ns, 3.0623 us/op
+WorkloadResult   5: 262144 op, 739300500.00 ns, 2.8202 us/op
+GC:  9 0 0 1468006936 262144
+Threading:  0 0 262144
+
+// AfterAll
+// Benchmark Process 48060 has exited with code 0.
+
+Mean = 3.006 μs, StdErr = 0.059 μs (1.97%), N = 5, StdDev = 0.133 μs
+Min = 2.820 μs, Q1 = 2.915 μs, Median = 3.062 μs, Q3 = 3.111 μs, Max = 3.121 μs
+IQR = 0.196 μs, LowerFence = 2.620 μs, UpperFence = 3.405 μs
+ConfidenceInterval = [2.495 μs; 3.517 μs] (CI 99.9%), Margin = 0.511 μs (16.99% of Mean)
+Skewness = -0.37, Kurtosis = 1.01, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2026-05-15 15:23 (0h 0m from now) **
+Successfully reverted power plan (GUID: 381b4222-f694-41f0-9685-ff5bb260df2e FriendlyName: Balanced)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\GeoTesterApi.Benchmarks.SrtmElevationServiceBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\GeoTesterApi.Benchmarks.SrtmElevationServiceBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\GeoTesterApi.Benchmarks.SrtmElevationServiceBenchmarks-report.html
+
+// * Detailed results *
+SrtmElevationServiceBenchmarks.'Single elevation lookup (Kyiv area)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 56.691 ns, StdErr = 0.491 ns (0.87%), N = 5, StdDev = 1.098 ns
+Min = 55.156 ns, Q1 = 56.008 ns, Median = 57.138 ns, Q3 = 57.238 ns, Max = 57.914 ns
+IQR = 1.230 ns, LowerFence = 54.163 ns, UpperFence = 59.083 ns
+ConfidenceInterval = [52.465 ns; 60.917 ns] (CI 99.9%), Margin = 4.226 ns (7.46% of Mean)
+Skewness = -0.28, Kurtosis = 1.12, MValue = 2
+-------------------- Histogram --------------------
+[54.739 ns ; 56.684 ns) | @@
+[56.684 ns ; 58.369 ns) | @@@
+---------------------------------------------------
+
+SrtmElevationServiceBenchmarks.'Grid of 9 elevation lookups (3x3)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 346.218 ns, StdErr = 2.984 ns (0.86%), N = 4, StdDev = 5.968 ns
+Min = 338.248 ns, Q1 = 344.445 ns, Median = 346.971 ns, Q3 = 348.745 ns, Max = 352.682 ns
+IQR = 4.300 ns, LowerFence = 337.994 ns, UpperFence = 355.195 ns
+ConfidenceInterval = [307.650 ns; 384.786 ns] (CI 99.9%), Margin = 38.568 ns (11.14% of Mean)
+Skewness = -0.28, Kurtosis = 1.14, MValue = 2
+-------------------- Histogram --------------------
+[333.313 ns ; 344.661 ns) | @
+[344.661 ns ; 354.531 ns) | @@@
+---------------------------------------------------
+
+SrtmElevationServiceBenchmarks.'Dense grid of 100 elevation lookups (10x10)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 6.388 μs, StdErr = 0.044 μs (0.69%), N = 4, StdDev = 0.088 μs
+Min = 6.273 μs, Q1 = 6.344 μs, Median = 6.407 μs, Q3 = 6.452 μs, Max = 6.465 μs
+IQR = 0.108 μs, LowerFence = 6.183 μs, UpperFence = 6.613 μs
+ConfidenceInterval = [5.821 μs; 6.956 μs] (CI 99.9%), Margin = 0.568 μs (8.88% of Mean)
+Skewness = -0.33, Kurtosis = 0.94, MValue = 2
+-------------------- Histogram --------------------
+[6.200 μs ; 6.344 μs) | @
+[6.344 μs ; 6.489 μs) | @@@
+---------------------------------------------------
+
+SrtmElevationServiceBenchmarks.'Sequential lookups along a line (100 points)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 5.989 μs, StdErr = 0.157 μs (2.62%), N = 5, StdDev = 0.350 μs
+Min = 5.610 μs, Q1 = 5.782 μs, Median = 5.934 μs, Q3 = 6.092 μs, Max = 6.528 μs
+IQR = 0.310 μs, LowerFence = 5.316 μs, UpperFence = 6.558 μs
+ConfidenceInterval = [4.640 μs; 7.338 μs] (CI 99.9%), Margin = 1.349 μs (22.52% of Mean)
+Skewness = 0.44, Kurtosis = 1.42, MValue = 2
+-------------------- Histogram --------------------
+[5.582 μs ; 6.259 μs) | @@@@
+[6.259 μs ; 6.797 μs) | @
+---------------------------------------------------
+
+SrtmElevationServiceBenchmarks.'Boundary test: corner and edge lookups': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 294.490 ns, StdErr = 3.606 ns (1.22%), N = 4, StdDev = 7.212 ns
+Min = 285.030 ns, Q1 = 290.784 ns, Median = 296.295 ns, Q3 = 300.001 ns, Max = 300.340 ns
+IQR = 9.216 ns, LowerFence = 276.960 ns, UpperFence = 313.825 ns
+ConfidenceInterval = [247.886 ns; 341.094 ns] (CI 99.9%), Margin = 46.604 ns (15.83% of Mean)
+Skewness = -0.33, Kurtosis = 0.93, MValue = 2
+-------------------- Histogram --------------------
+[279.067 ns ; 290.558 ns) | @
+[290.558 ns ; 302.484 ns) | @@@
+---------------------------------------------------
+
+SrtmElevationServiceBenchmarks.'Same tile cache hit (multiple lookups, same tile)': Job-TVZODC(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 3.006 μs, StdErr = 0.059 μs (1.97%), N = 5, StdDev = 0.133 μs
+Min = 2.820 μs, Q1 = 2.915 μs, Median = 3.062 μs, Q3 = 3.111 μs, Max = 3.121 μs
+IQR = 0.196 μs, LowerFence = 2.620 μs, UpperFence = 3.405 μs
+ConfidenceInterval = [2.495 μs; 3.517 μs] (CI 99.9%), Margin = 0.511 μs (16.99% of Mean)
+Skewness = -0.37, Kurtosis = 1.01, MValue = 2
+-------------------- Histogram --------------------
+[2.766 μs ; 2.990 μs) | @@
+[2.990 μs ; 3.223 μs) | @@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.2, OS=Windows 11 (10.0.26200.8246)
+AMD Ryzen AI 7 350 w/ Radeon 860M, 1 CPU, 16 logical and 8 physical cores
+.NET SDK=10.0.202
+  [Host]     : .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+  Job-TVZODC : .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+
+IterationCount=5  WarmupCount=3  
+
+|                                              Method |        Mean |        Error |     StdDev |         Min |         Max |      Median |   Gen0 | Allocated |
+|---------------------------------------------------- |------------:|-------------:|-----------:|------------:|------------:|------------:|-------:|----------:|
+|               'Single elevation lookup (Kyiv area)' |    56.69 ns |     4.226 ns |   1.098 ns |    55.16 ns |    57.91 ns |    57.14 ns | 0.0006 |     112 B |
+|                 'Grid of 9 elevation lookups (3x3)' |   346.22 ns |    38.568 ns |   5.968 ns |   338.25 ns |   352.68 ns |   346.97 ns | 0.0038 |     672 B |
+|       'Dense grid of 100 elevation lookups (10x10)' | 6,388.17 ns |   567.521 ns |  87.825 ns | 6,272.78 ns | 6,465.32 ns | 6,407.29 ns | 0.0763 |   12320 B |
+|      'Sequential lookups along a line (100 points)' | 5,989.08 ns | 1,348.723 ns | 350.259 ns | 5,609.75 ns | 6,527.79 ns | 5,934.12 ns | 0.0687 |   11200 B |
+|            'Boundary test: corner and edge lookups' |   294.49 ns |    46.604 ns |   7.212 ns |   285.03 ns |   300.34 ns |   296.29 ns | 0.0033 |     560 B |
+| 'Same tile cache hit (multiple lookups, same tile)' | 3,005.87 ns |   510.799 ns | 132.653 ns | 2,820.21 ns | 3,121.46 ns | 3,062.26 ns | 0.0343 |    5600 B |
+
+// * Hints *
+Outliers
+  SrtmElevationServiceBenchmarks.'Grid of 9 elevation lookups (3x3)': IterationCount=5, WarmupCount=3           -> 1 outlier  was  removed (371.96 ns)
+  SrtmElevationServiceBenchmarks.'Dense grid of 100 elevation lookups (10x10)': IterationCount=5, WarmupCount=3 -> 1 outlier  was  removed (6.73 μs)
+  SrtmElevationServiceBenchmarks.'Boundary test: corner and edge lookups': IterationCount=5, WarmupCount=3      -> 1 outlier  was  removed (336.30 ns)
+
+// * Legends *
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Min       : Minimum
+  Max       : Maximum
+  Median    : Value separating the higher half of all measurements (50th percentile)
+  Gen0      : GC Generation 0 collects per 1000 operations
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ns      : 1 Nanosecond (0.000000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:52 (52.74 sec), executed benchmarks: 6
+
+Global total time: 00:02:26 (146.35 sec), executed benchmarks: 15
+// * Artifacts cleanup *
