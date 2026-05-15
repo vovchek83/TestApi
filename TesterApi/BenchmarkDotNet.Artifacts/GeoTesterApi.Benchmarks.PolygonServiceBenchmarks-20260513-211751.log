@@ -1,0 +1,431 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 4 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet  restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\0ec1eea4-822f-436e-9a61-cb2a373311ea
+// command took 1.77s and exited with 0
+// start dotnet  build -c Release --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\0ec1eea4-822f-436e-9a61-cb2a373311ea
+// command took 4.94s and exited with 0
+// ***** Done, took 00:00:06 (6.82 sec)   *****
+// Found 4 benchmarks:
+//   PolygonServiceBenchmarks.'Create simple rectangular polygon': Job-JBEAXR(IterationCount=5, WarmupCount=3)
+//   PolygonServiceBenchmarks.'Create multi-polygon with 2 rectangles': Job-JBEAXR(IterationCount=5, WarmupCount=3)
+//   PolygonServiceBenchmarks.'Create donut polygon with hole': Job-JBEAXR(IterationCount=5, WarmupCount=3)
+//   PolygonServiceBenchmarks.'Create and parse multi-polygon from WKT': Job-JBEAXR(IterationCount=5, WarmupCount=3)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: PolygonServiceBenchmarks.'Create simple rectangular polygon': Job-JBEAXR(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 0ec1eea4-822f-436e-9a61-cb2a373311ea.dll --benchmarkName GeoTesterApi.Benchmarks.PolygonServiceBenchmarks.CreatePolygon --job "IterationCount=5, WarmupCount=3" --benchmarkId 0 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\0ec1eea4-822f-436e-9a61-cb2a373311ea\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-IBVQBV(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 132400.00 ns, 132.4000 us/op
+WorkloadJitting  1: 1 op, 54213900.00 ns, 54.2139 ms/op
+
+WorkloadPilot    1: 2 op, 49200.00 ns, 24.6000 us/op
+WorkloadPilot    2: 3 op, 17200.00 ns, 5.7333 us/op
+WorkloadPilot    3: 4 op, 18600.00 ns, 4.6500 us/op
+WorkloadPilot    4: 5 op, 21600.00 ns, 4.3200 us/op
+WorkloadPilot    5: 6 op, 18300.00 ns, 3.0500 us/op
+WorkloadPilot    6: 7 op, 25500.00 ns, 3.6429 us/op
+WorkloadPilot    7: 8 op, 15000.00 ns, 1.8750 us/op
+WorkloadPilot    8: 9 op, 30300.00 ns, 3.3667 us/op
+WorkloadPilot    9: 10 op, 18600.00 ns, 1.8600 us/op
+WorkloadPilot   10: 11 op, 27900.00 ns, 2.5364 us/op
+WorkloadPilot   11: 12 op, 24200.00 ns, 2.0167 us/op
+WorkloadPilot   12: 13 op, 43400.00 ns, 3.3385 us/op
+WorkloadPilot   13: 14 op, 35900.00 ns, 2.5643 us/op
+WorkloadPilot   14: 15 op, 28600.00 ns, 1.9067 us/op
+WorkloadPilot   15: 16 op, 39000.00 ns, 2.4375 us/op
+WorkloadPilot   16: 32 op, 34800.00 ns, 1.0875 us/op
+WorkloadPilot   17: 64 op, 75400.00 ns, 1.1781 us/op
+WorkloadPilot   18: 128 op, 111800.00 ns, 873.4375 ns/op
+WorkloadPilot   19: 256 op, 214400.00 ns, 837.5000 ns/op
+WorkloadPilot   20: 512 op, 430200.00 ns, 840.2344 ns/op
+WorkloadPilot   21: 1024 op, 695000.00 ns, 678.7109 ns/op
+WorkloadPilot   22: 2048 op, 1285100.00 ns, 627.4902 ns/op
+WorkloadPilot   23: 4096 op, 2206100.00 ns, 538.5986 ns/op
+WorkloadPilot   24: 8192 op, 3155200.00 ns, 385.1562 ns/op
+WorkloadPilot   25: 16384 op, 7450600.00 ns, 454.7485 ns/op
+WorkloadPilot   26: 32768 op, 14017800.00 ns, 427.7893 ns/op
+WorkloadPilot   27: 65536 op, 27325000.00 ns, 416.9464 ns/op
+WorkloadPilot   28: 131072 op, 53859300.00 ns, 410.9138 ns/op
+WorkloadPilot   29: 262144 op, 88220800.00 ns, 336.5356 ns/op
+WorkloadPilot   30: 524288 op, 100740100.00 ns, 192.1465 ns/op
+WorkloadPilot   31: 1048576 op, 180313200.00 ns, 171.9601 ns/op
+WorkloadPilot   32: 2097152 op, 341447100.00 ns, 162.8147 ns/op
+WorkloadPilot   33: 4194304 op, 692433600.00 ns, 165.0890 ns/op
+
+WorkloadWarmup   1: 4194304 op, 685353500.00 ns, 163.4010 ns/op
+WorkloadWarmup   2: 4194304 op, 729154100.00 ns, 173.8439 ns/op
+WorkloadWarmup   3: 4194304 op, 683966600.00 ns, 163.0703 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 4194304 op, 689740700.00 ns, 164.4470 ns/op
+WorkloadActual   2: 4194304 op, 674346000.00 ns, 160.7766 ns/op
+WorkloadActual   3: 4194304 op, 695104700.00 ns, 165.7259 ns/op
+WorkloadActual   4: 4194304 op, 675881900.00 ns, 161.1428 ns/op
+WorkloadActual   5: 4194304 op, 665892800.00 ns, 158.7612 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 4194304 op, 689740700.00 ns, 164.4470 ns/op
+WorkloadResult   2: 4194304 op, 674346000.00 ns, 160.7766 ns/op
+WorkloadResult   3: 4194304 op, 695104700.00 ns, 165.7259 ns/op
+WorkloadResult   4: 4194304 op, 675881900.00 ns, 161.1428 ns/op
+WorkloadResult   5: 4194304 op, 665892800.00 ns, 158.7612 ns/op
+GC:  25 0 0 4160749568 4194304
+Threading:  0 0 4194304
+
+// AfterAll
+// Benchmark Process 59956 has exited with code 0.
+
+Mean = 162.171 ns, StdErr = 1.274 ns (0.79%), N = 5, StdDev = 2.848 ns
+Min = 158.761 ns, Q1 = 160.777 ns, Median = 161.143 ns, Q3 = 164.447 ns, Max = 165.726 ns
+IQR = 3.670 ns, LowerFence = 155.271 ns, UpperFence = 169.953 ns
+ConfidenceInterval = [151.204 ns; 173.138 ns] (CI 99.9%), Margin = 10.967 ns (6.76% of Mean)
+Skewness = 0.12, Kurtosis = 0.99, MValue = 2
+
+// ** Remained 3 (75.0%) benchmark(s) to run. Estimated finish 2026-05-13 21:18 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: PolygonServiceBenchmarks.'Create multi-polygon with 2 rectangles': Job-JBEAXR(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 0ec1eea4-822f-436e-9a61-cb2a373311ea.dll --benchmarkName GeoTesterApi.Benchmarks.PolygonServiceBenchmarks.CreateMultiPolygon --job "IterationCount=5, WarmupCount=3" --benchmarkId 1 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\0ec1eea4-822f-436e-9a61-cb2a373311ea\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-OVCYOS(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 128300.00 ns, 128.3000 us/op
+WorkloadJitting  1: 1 op, 295433600.00 ns, 295.4336 ms/op
+
+WorkloadPilot    1: 2 op, 622200.00 ns, 311.1000 us/op
+WorkloadPilot    2: 3 op, 257900.00 ns, 85.9667 us/op
+WorkloadPilot    3: 4 op, 306300.00 ns, 76.5750 us/op
+WorkloadPilot    4: 5 op, 301200.00 ns, 60.2400 us/op
+WorkloadPilot    5: 6 op, 361900.00 ns, 60.3167 us/op
+WorkloadPilot    6: 7 op, 409700.00 ns, 58.5286 us/op
+WorkloadPilot    7: 8 op, 430100.00 ns, 53.7625 us/op
+WorkloadPilot    8: 9 op, 575400.00 ns, 63.9333 us/op
+WorkloadPilot    9: 10 op, 561300.00 ns, 56.1300 us/op
+WorkloadPilot   10: 11 op, 610300.00 ns, 55.4818 us/op
+WorkloadPilot   11: 12 op, 657100.00 ns, 54.7583 us/op
+WorkloadPilot   12: 13 op, 626500.00 ns, 48.1923 us/op
+WorkloadPilot   13: 14 op, 707100.00 ns, 50.5071 us/op
+WorkloadPilot   14: 15 op, 1005100.00 ns, 67.0067 us/op
+WorkloadPilot   15: 16 op, 821900.00 ns, 51.3687 us/op
+WorkloadPilot   16: 32 op, 1580900.00 ns, 49.4031 us/op
+WorkloadPilot   17: 64 op, 3762700.00 ns, 58.7922 us/op
+WorkloadPilot   18: 128 op, 6681900.00 ns, 52.2023 us/op
+WorkloadPilot   19: 256 op, 12852000.00 ns, 50.2031 us/op
+WorkloadPilot   20: 512 op, 28664900.00 ns, 55.9861 us/op
+WorkloadPilot   21: 1024 op, 67172400.00 ns, 65.5980 us/op
+WorkloadPilot   22: 2048 op, 166888300.00 ns, 81.4884 us/op
+WorkloadPilot   23: 4096 op, 343853500.00 ns, 83.9486 us/op
+WorkloadPilot   24: 8192 op, 199839600.00 ns, 24.3945 us/op
+WorkloadPilot   25: 16384 op, 248563400.00 ns, 15.1711 us/op
+WorkloadPilot   26: 32768 op, 478404700.00 ns, 14.5998 us/op
+WorkloadPilot   27: 65536 op, 951534100.00 ns, 14.5193 us/op
+
+WorkloadWarmup   1: 65536 op, 955726000.00 ns, 14.5832 us/op
+WorkloadWarmup   2: 65536 op, 983781000.00 ns, 15.0113 us/op
+WorkloadWarmup   3: 65536 op, 952334600.00 ns, 14.5315 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 65536 op, 947083500.00 ns, 14.4513 us/op
+WorkloadActual   2: 65536 op, 955175600.00 ns, 14.5748 us/op
+WorkloadActual   3: 65536 op, 940614000.00 ns, 14.3526 us/op
+WorkloadActual   4: 65536 op, 945804900.00 ns, 14.4318 us/op
+WorkloadActual   5: 65536 op, 943411000.00 ns, 14.3953 us/op
+
+// AfterActualRun
+WorkloadResult   1: 65536 op, 947083500.00 ns, 14.4513 us/op
+WorkloadResult   2: 65536 op, 940614000.00 ns, 14.3526 us/op
+WorkloadResult   3: 65536 op, 945804900.00 ns, 14.4318 us/op
+WorkloadResult   4: 65536 op, 943411000.00 ns, 14.3953 us/op
+GC:  12 0 0 2077773984 65536
+Threading:  0 0 65536
+
+// AfterAll
+// Benchmark Process 55540 has exited with code 0.
+
+Mean = 14.408 μs, StdErr = 0.022 μs (0.15%), N = 4, StdDev = 0.043 μs
+Min = 14.353 μs, Q1 = 14.385 μs, Median = 14.414 μs, Q3 = 14.437 μs, Max = 14.451 μs
+IQR = 0.052 μs, LowerFence = 14.307 μs, UpperFence = 14.515 μs
+ConfidenceInterval = [14.127 μs; 14.689 μs] (CI 99.9%), Margin = 0.281 μs (1.95% of Mean)
+Skewness = -0.22, Kurtosis = 0.92, MValue = 2
+
+// ** Remained 2 (50.0%) benchmark(s) to run. Estimated finish 2026-05-13 21:18 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: PolygonServiceBenchmarks.'Create donut polygon with hole': Job-JBEAXR(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 0ec1eea4-822f-436e-9a61-cb2a373311ea.dll --benchmarkName GeoTesterApi.Benchmarks.PolygonServiceBenchmarks.CreateDonutPolygon --job "IterationCount=5, WarmupCount=3" --benchmarkId 2 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\0ec1eea4-822f-436e-9a61-cb2a373311ea\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-SHLORB(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 126000.00 ns, 126.0000 us/op
+WorkloadJitting  1: 1 op, 2389800.00 ns, 2.3898 ms/op
+
+OverheadJitting  2: 16 op, 223700.00 ns, 13.9812 us/op
+WorkloadJitting  2: 16 op, 324300.00 ns, 20.2688 us/op
+
+WorkloadPilot    1: 16 op, 106500.00 ns, 6.6562 us/op
+WorkloadPilot    2: 32 op, 246500.00 ns, 7.7031 us/op
+WorkloadPilot    3: 64 op, 376400.00 ns, 5.8812 us/op
+WorkloadPilot    4: 128 op, 1037800.00 ns, 8.1078 us/op
+WorkloadPilot    5: 256 op, 1080000.00 ns, 4.2188 us/op
+WorkloadPilot    6: 512 op, 2803700.00 ns, 5.4760 us/op
+WorkloadPilot    7: 1024 op, 4473000.00 ns, 4.3682 us/op
+WorkloadPilot    8: 2048 op, 8665600.00 ns, 4.2313 us/op
+WorkloadPilot    9: 4096 op, 17140200.00 ns, 4.1846 us/op
+WorkloadPilot   10: 8192 op, 35450500.00 ns, 4.3275 us/op
+WorkloadPilot   11: 16384 op, 69364800.00 ns, 4.2337 us/op
+WorkloadPilot   12: 32768 op, 82789700.00 ns, 2.5265 us/op
+WorkloadPilot   13: 65536 op, 146191500.00 ns, 2.2307 us/op
+WorkloadPilot   14: 131072 op, 279318200.00 ns, 2.1310 us/op
+WorkloadPilot   15: 262144 op, 542653800.00 ns, 2.0701 us/op
+
+OverheadWarmup   1: 262144 op, 333800.00 ns, 1.2733 ns/op
+OverheadWarmup   2: 262144 op, 326100.00 ns, 1.2440 ns/op
+OverheadWarmup   3: 262144 op, 323000.00 ns, 1.2321 ns/op
+OverheadWarmup   4: 262144 op, 479800.00 ns, 1.8303 ns/op
+OverheadWarmup   5: 262144 op, 327600.00 ns, 1.2497 ns/op
+OverheadWarmup   6: 262144 op, 402900.00 ns, 1.5369 ns/op
+OverheadWarmup   7: 262144 op, 469400.00 ns, 1.7906 ns/op
+OverheadWarmup   8: 262144 op, 513400.00 ns, 1.9585 ns/op
+OverheadWarmup   9: 262144 op, 464500.00 ns, 1.7719 ns/op
+
+OverheadActual   1: 262144 op, 710600.00 ns, 2.7107 ns/op
+OverheadActual   2: 262144 op, 331400.00 ns, 1.2642 ns/op
+OverheadActual   3: 262144 op, 331400.00 ns, 1.2642 ns/op
+OverheadActual   4: 262144 op, 330700.00 ns, 1.2615 ns/op
+OverheadActual   5: 262144 op, 468500.00 ns, 1.7872 ns/op
+OverheadActual   6: 262144 op, 387700.00 ns, 1.4790 ns/op
+OverheadActual   7: 262144 op, 405400.00 ns, 1.5465 ns/op
+OverheadActual   8: 262144 op, 661700.00 ns, 2.5242 ns/op
+OverheadActual   9: 262144 op, 585500.00 ns, 2.2335 ns/op
+OverheadActual  10: 262144 op, 670500.00 ns, 2.5578 ns/op
+OverheadActual  11: 262144 op, 467300.00 ns, 1.7826 ns/op
+OverheadActual  12: 262144 op, 332700.00 ns, 1.2691 ns/op
+OverheadActual  13: 262144 op, 329100.00 ns, 1.2554 ns/op
+OverheadActual  14: 262144 op, 676200.00 ns, 2.5795 ns/op
+OverheadActual  15: 262144 op, 467300.00 ns, 1.7826 ns/op
+OverheadActual  16: 262144 op, 332200.00 ns, 1.2672 ns/op
+OverheadActual  17: 262144 op, 639900.00 ns, 2.4410 ns/op
+OverheadActual  18: 262144 op, 491000.00 ns, 1.8730 ns/op
+OverheadActual  19: 262144 op, 652200.00 ns, 2.4879 ns/op
+OverheadActual  20: 262144 op, 462000.00 ns, 1.7624 ns/op
+
+WorkloadWarmup   1: 262144 op, 579192400.00 ns, 2.2094 us/op
+WorkloadWarmup   2: 262144 op, 594116800.00 ns, 2.2664 us/op
+WorkloadWarmup   3: 262144 op, 569614800.00 ns, 2.1729 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 262144 op, 566284100.00 ns, 2.1602 us/op
+WorkloadActual   2: 262144 op, 557671900.00 ns, 2.1273 us/op
+WorkloadActual   3: 262144 op, 564810600.00 ns, 2.1546 us/op
+WorkloadActual   4: 262144 op, 572256400.00 ns, 2.1830 us/op
+WorkloadActual   5: 262144 op, 572157900.00 ns, 2.1826 us/op
+
+// AfterActualRun
+WorkloadResult   1: 262144 op, 565816800.00 ns, 2.1584 us/op
+WorkloadResult   2: 262144 op, 557204600.00 ns, 2.1256 us/op
+WorkloadResult   3: 262144 op, 564343300.00 ns, 2.1528 us/op
+WorkloadResult   4: 262144 op, 571789100.00 ns, 2.1812 us/op
+WorkloadResult   5: 262144 op, 571690600.00 ns, 2.1808 us/op
+GC:  14 0 0 2390753616 262144
+Threading:  0 0 262144
+
+// AfterAll
+// Benchmark Process 22340 has exited with code 0.
+
+Mean = 2.160 μs, StdErr = 0.010 μs (0.48%), N = 5, StdDev = 0.023 μs
+Min = 2.126 μs, Q1 = 2.153 μs, Median = 2.158 μs, Q3 = 2.181 μs, Max = 2.181 μs
+IQR = 0.028 μs, LowerFence = 2.111 μs, UpperFence = 2.223 μs
+ConfidenceInterval = [2.071 μs; 2.248 μs] (CI 99.9%), Margin = 0.089 μs (4.11% of Mean)
+Skewness = -0.35, Kurtosis = 1.26, MValue = 2
+
+// ** Remained 1 (25.0%) benchmark(s) to run. Estimated finish 2026-05-13 21:18 (0h 0m from now) **
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: High performance)
+// **************************
+// Benchmark: PolygonServiceBenchmarks.'Create and parse multi-polygon from WKT': Job-JBEAXR(IterationCount=5, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet 0ec1eea4-822f-436e-9a61-cb2a373311ea.dll --benchmarkName GeoTesterApi.Benchmarks.PolygonServiceBenchmarks.CreateMultiPolygonFromWkt --job "IterationCount=5, WarmupCount=3" --benchmarkId 3 in D:\projects\TesterApi\TesterApi\bin\Release\net8.0\0ec1eea4-822f-436e-9a61-cb2a373311ea\bin\Release\net8.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+// GC=Concurrent Server
+// HardwareIntrinsics=AVX2,AES,BMI1,BMI2,FMA,LZCNT,PCLMUL,POPCNT,AvxVnni VectorSize=256
+// Job: Job-TQPQVD(IterationCount=5, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 127200.00 ns, 127.2000 us/op
+WorkloadJitting  1: 1 op, 87875800.00 ns, 87.8758 ms/op
+
+WorkloadPilot    1: 2 op, 3311300.00 ns, 1.6557 ms/op
+WorkloadPilot    2: 3 op, 3875700.00 ns, 1.2919 ms/op
+WorkloadPilot    3: 4 op, 5051700.00 ns, 1.2629 ms/op
+WorkloadPilot    4: 5 op, 6156900.00 ns, 1.2314 ms/op
+WorkloadPilot    5: 6 op, 7462700.00 ns, 1.2438 ms/op
+WorkloadPilot    6: 7 op, 8453300.00 ns, 1.2076 ms/op
+WorkloadPilot    7: 8 op, 9894900.00 ns, 1.2369 ms/op
+WorkloadPilot    8: 9 op, 10134900.00 ns, 1.1261 ms/op
+WorkloadPilot    9: 10 op, 12597900.00 ns, 1.2598 ms/op
+WorkloadPilot   10: 11 op, 12154500.00 ns, 1.1050 ms/op
+WorkloadPilot   11: 12 op, 13214700.00 ns, 1.1012 ms/op
+WorkloadPilot   12: 13 op, 14273600.00 ns, 1.0980 ms/op
+WorkloadPilot   13: 14 op, 15200500.00 ns, 1.0857 ms/op
+WorkloadPilot   14: 15 op, 16140500.00 ns, 1.0760 ms/op
+WorkloadPilot   15: 16 op, 27169100.00 ns, 1.6981 ms/op
+WorkloadPilot   16: 32 op, 76572800.00 ns, 2.3929 ms/op
+WorkloadPilot   17: 64 op, 126770400.00 ns, 1.9808 ms/op
+WorkloadPilot   18: 128 op, 218831100.00 ns, 1.7096 ms/op
+WorkloadPilot   19: 256 op, 362993700.00 ns, 1.4179 ms/op
+WorkloadPilot   20: 512 op, 289911600.00 ns, 566.2336 us/op
+WorkloadPilot   21: 1024 op, 458270300.00 ns, 447.5296 us/op
+WorkloadPilot   22: 2048 op, 766245600.00 ns, 374.1434 us/op
+
+WorkloadWarmup   1: 2048 op, 778824600.00 ns, 380.2854 us/op
+WorkloadWarmup   2: 2048 op, 777874900.00 ns, 379.8217 us/op
+WorkloadWarmup   3: 2048 op, 790539900.00 ns, 386.0058 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 2048 op, 781224800.00 ns, 381.4574 us/op
+WorkloadActual   2: 2048 op, 782368400.00 ns, 382.0158 us/op
+WorkloadActual   3: 2048 op, 773277300.00 ns, 377.5768 us/op
+WorkloadActual   4: 2048 op, 775018300.00 ns, 378.4269 us/op
+WorkloadActual   5: 2048 op, 780205100.00 ns, 380.9595 us/op
+
+// AfterActualRun
+WorkloadResult   1: 2048 op, 781224800.00 ns, 381.4574 us/op
+WorkloadResult   2: 2048 op, 782368400.00 ns, 382.0158 us/op
+WorkloadResult   3: 2048 op, 773277300.00 ns, 377.5768 us/op
+WorkloadResult   4: 2048 op, 775018300.00 ns, 378.4269 us/op
+WorkloadResult   5: 2048 op, 780205100.00 ns, 380.9595 us/op
+GC:  6 0 0 1112618616 2048
+Threading:  0 0 2048
+
+// AfterAll
+// Benchmark Process 28084 has exited with code 0.
+
+Mean = 380.087 μs, StdErr = 0.878 μs (0.23%), N = 5, StdDev = 1.963 μs
+Min = 377.577 μs, Q1 = 378.427 μs, Median = 380.960 μs, Q3 = 381.457 μs, Max = 382.016 μs
+IQR = 3.031 μs, LowerFence = 373.881 μs, UpperFence = 386.003 μs
+ConfidenceInterval = [372.528 μs; 387.647 μs] (CI 99.9%), Margin = 7.560 μs (1.99% of Mean)
+Skewness = -0.26, Kurtosis = 0.88, MValue = 2
+
+// ** Remained 0 (0.0%) benchmark(s) to run. Estimated finish 2026-05-13 21:18 (0h 0m from now) **
+Successfully reverted power plan (GUID: 381b4222-f694-41f0-9685-ff5bb260df2e FriendlyName: Balanced)
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\GeoTesterApi.Benchmarks.PolygonServiceBenchmarks-report.csv
+  BenchmarkDotNet.Artifacts\results\GeoTesterApi.Benchmarks.PolygonServiceBenchmarks-report-github.md
+  BenchmarkDotNet.Artifacts\results\GeoTesterApi.Benchmarks.PolygonServiceBenchmarks-report.html
+
+// * Detailed results *
+PolygonServiceBenchmarks.'Create simple rectangular polygon': Job-JBEAXR(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 162.171 ns, StdErr = 1.274 ns (0.79%), N = 5, StdDev = 2.848 ns
+Min = 158.761 ns, Q1 = 160.777 ns, Median = 161.143 ns, Q3 = 164.447 ns, Max = 165.726 ns
+IQR = 3.670 ns, LowerFence = 155.271 ns, UpperFence = 169.953 ns
+ConfidenceInterval = [151.204 ns; 173.138 ns] (CI 99.9%), Margin = 10.967 ns (6.76% of Mean)
+Skewness = 0.12, Kurtosis = 0.99, MValue = 2
+-------------------- Histogram --------------------
+[157.766 ns ; 162.900 ns) | @@@
+[162.900 ns ; 167.912 ns) | @@
+---------------------------------------------------
+
+PolygonServiceBenchmarks.'Create multi-polygon with 2 rectangles': Job-JBEAXR(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 14.408 μs, StdErr = 0.022 μs (0.15%), N = 4, StdDev = 0.043 μs
+Min = 14.353 μs, Q1 = 14.385 μs, Median = 14.414 μs, Q3 = 14.437 μs, Max = 14.451 μs
+IQR = 0.052 μs, LowerFence = 14.307 μs, UpperFence = 14.515 μs
+ConfidenceInterval = [14.127 μs; 14.689 μs] (CI 99.9%), Margin = 0.281 μs (1.95% of Mean)
+Skewness = -0.22, Kurtosis = 0.92, MValue = 2
+-------------------- Histogram --------------------
+[14.317 μs ; 14.487 μs) | @@@@
+---------------------------------------------------
+
+PolygonServiceBenchmarks.'Create donut polygon with hole': Job-JBEAXR(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 2.160 μs, StdErr = 0.010 μs (0.48%), N = 5, StdDev = 0.023 μs
+Min = 2.126 μs, Q1 = 2.153 μs, Median = 2.158 μs, Q3 = 2.181 μs, Max = 2.181 μs
+IQR = 0.028 μs, LowerFence = 2.111 μs, UpperFence = 2.223 μs
+ConfidenceInterval = [2.071 μs; 2.248 μs] (CI 99.9%), Margin = 0.089 μs (4.11% of Mean)
+Skewness = -0.35, Kurtosis = 1.26, MValue = 2
+-------------------- Histogram --------------------
+[2.108 μs ; 2.189 μs) | @@@@@
+---------------------------------------------------
+
+PolygonServiceBenchmarks.'Create and parse multi-polygon from WKT': Job-JBEAXR(IterationCount=5, WarmupCount=3)
+Runtime = .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2; GC = Concurrent Server
+Mean = 380.087 μs, StdErr = 0.878 μs (0.23%), N = 5, StdDev = 1.963 μs
+Min = 377.577 μs, Q1 = 378.427 μs, Median = 380.960 μs, Q3 = 381.457 μs, Max = 382.016 μs
+IQR = 3.031 μs, LowerFence = 373.881 μs, UpperFence = 386.003 μs
+ConfidenceInterval = [372.528 μs; 387.647 μs] (CI 99.9%), Margin = 7.560 μs (1.99% of Mean)
+Skewness = -0.26, Kurtosis = 0.88, MValue = 2
+-------------------- Histogram --------------------
+[376.070 μs ; 383.523 μs) | @@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.2, OS=Windows 11 (10.0.26200.8246)
+AMD Ryzen AI 7 350 w/ Radeon 860M, 1 CPU, 16 logical and 8 physical cores
+.NET SDK=10.0.202
+  [Host]     : .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+  Job-JBEAXR : .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+
+IterationCount=5  WarmupCount=3  
+
+|                                    Method |         Mean |       Error |      StdDev |          Min |          Max |       Median |   Gen0 | Allocated |
+|------------------------------------------ |-------------:|------------:|------------:|-------------:|-------------:|-------------:|-------:|----------:|
+|       'Create simple rectangular polygon' |     162.2 ns |    10.97 ns |     2.85 ns |     158.8 ns |     165.7 ns |     161.1 ns | 0.0060 |     992 B |
+|  'Create multi-polygon with 2 rectangles' |  14,407.8 ns |   281.02 ns |    43.49 ns |  14,352.6 ns |  14,451.3 ns |  14,413.6 ns | 0.1831 |   31704 B |
+|          'Create donut polygon with hole' |   2,159.8 ns |    88.71 ns |    23.04 ns |   2,125.6 ns |   2,181.2 ns |   2,158.4 ns | 0.0534 |    9120 B |
+| 'Create and parse multi-polygon from WKT' | 380,087.3 ns | 7,559.60 ns | 1,963.20 ns | 377,576.8 ns | 382,015.8 ns | 380,959.5 ns | 2.9297 |  543271 B |
+
+// * Hints *
+Outliers
+  PolygonServiceBenchmarks.'Create multi-polygon with 2 rectangles': IterationCount=5, WarmupCount=3 -> 1 outlier  was  removed (14.57 μs)
+
+// * Legends *
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Min       : Minimum
+  Max       : Maximum
+  Median    : Value separating the higher half of all measurements (50th percentile)
+  Gen0      : GC Generation 0 collects per 1000 operations
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ns      : 1 Nanosecond (0.000000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:00:38 (38.29 sec), executed benchmarks: 4
+
+Global total time: 00:00:45 (45.85 sec), executed benchmarks: 4
+// * Artifacts cleanup *

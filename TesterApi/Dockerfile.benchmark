@@ -1,0 +1,36 @@
+# Dockerfile for running BenchmarkDotNet benchmarks
+# Build from project root: docker build -f TesterApi/Dockerfile.benchmark -t geotester-bench .
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+# Copy project file and restore dependencies
+COPY TesterApi/GeoTesterApi.csproj ./TesterApi/
+RUN dotnet restore ./TesterApi/GeoTesterApi.csproj
+
+# Copy all source code
+COPY . .
+
+# Build in Release mode
+WORKDIR /src/TesterApi
+RUN dotnet build GeoTesterApi.csproj -c Release -o /app/build
+
+# Publish
+FROM build AS publish
+WORKDIR /src/TesterApi
+RUN dotnet publish GeoTesterApi.csproj -c Release -o /app/publish /p:UseAppHost=false
+
+# Final stage: Runtime
+FROM mcr.microsoft.com/dotnet/runtime:8.0
+WORKDIR /app
+
+# Copy published app
+COPY --from=publish /app/publish .
+
+# Create results directory
+RUN mkdir -p /app/BenchmarkDotNet.Artifacts
+
+# Run benchmarks
+ENTRYPOINT ["dotnet", "GeoTesterApi.dll", "benchmark"]
+CMD []
+

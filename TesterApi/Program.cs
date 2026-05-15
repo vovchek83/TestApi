@@ -1,5 +1,14 @@
 using GeoToolkit;
+using GeoTesterApi;
 using GeoTesterApi.Services;
+
+// Check if running in benchmark mode
+if (args.Length > 0 && args[0].Equals("benchmark", StringComparison.OrdinalIgnoreCase))
+{
+    var filter = args.Length > 1 ? args[1] : null;
+    BenchmarkRunner.RunBenchmarks(filter);
+    return;
+}
 
 var builder = WebApplication.CreateBuilder(args);
 

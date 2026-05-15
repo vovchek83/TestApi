@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>GeoTesterApi.Benchmarks.SrtmElevationServiceBenchmarks-20260515-150703</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.2, OS=Windows 11 (10.0.26200.8246)
+AMD Ryzen AI 7 350 w/ Radeon 860M, 1 CPU, 16 logical and 8 physical cores
+.NET SDK=10.0.202
+  [Host]     : .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+  Job-OXATKJ : .NET 8.0.26 (8.0.2626.16921), X64 RyuJIT AVX2
+</code></pre>
+<pre><code>IterationCount=5  WarmupCount=3  
+</code></pre>
+
+<table>
+<thead><tr><th>                                       Method</th><th> Mean</th><th>Error</th><th>StdDev</th><th>  Min</th><th>  Max</th><th>Median</th><th>Gen0</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>&#39;Single elevation lookup (Kyiv area)&#39;</td><td>174.1 ns</td><td>37.81 ns</td><td>9.82 ns</td><td>164.3 ns</td><td>186.4 ns</td><td>168.6 ns</td><td>0.0005</td><td>112 B</td>
+</tr><tr><td>&#39;Grid of 9 elevation lookups (3x3)&#39;</td><td>937.9 ns</td><td>194.68 ns</td><td>50.56 ns</td><td>873.9 ns</td><td>992.0 ns</td><td>942.3 ns</td><td>0.0038</td><td>672 B</td>
+</tr><tr><td>&#39;Dense grid of 100 elevation lookups (10x10)&#39;</td><td>19,820.0 ns</td><td>3,853.72 ns</td><td>1,000.80 ns</td><td>18,747.9 ns</td><td>21,252.4 ns</td><td>19,656.6 ns</td><td>0.0610</td><td>12320 B</td>
+</tr><tr><td>&#39;Sequential lookups along a line (100 points)&#39;</td><td>17,920.1 ns</td><td>1,945.67 ns</td><td>505.28 ns</td><td>17,362.6 ns</td><td>18,691.5 ns</td><td>17,722.3 ns</td><td>0.0610</td><td>11200 B</td>
+</tr><tr><td>&#39;Boundary test: corner and edge lookups&#39;</td><td>821.5 ns</td><td>58.47 ns</td><td>15.18 ns</td><td>796.3 ns</td><td>834.3 ns</td><td>825.4 ns</td><td>0.0019</td><td>560 B</td>
+</tr><tr><td>&#39;Same tile cache hit (multiple lookups, same tile)&#39;</td><td>8,499.9 ns</td><td>2,540.12 ns</td><td>659.66 ns</td><td>7,761.5 ns</td><td>9,209.3 ns</td><td>8,202.3 ns</td><td>0.0305</td><td>5600 B</td>
+</tr></tbody></table>
+</body>
+</html>

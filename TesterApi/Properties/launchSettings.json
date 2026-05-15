@@ -2,6 +2,7 @@
   "profiles": {
     "http": {
       "commandName": "Project",
+      "commandLineArgs": "benchmark ",
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
